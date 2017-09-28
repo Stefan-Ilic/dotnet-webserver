@@ -3,3 +3,4 @@ obj
 *.suo
 deploy/
 /MyWebServer/*.user
+.vs

@@ -31,7 +31,8 @@ namespace MyWebServer
 
         public Url(string raw)
         {
-
+            rawUrl = raw;
+            parameterCount = Utility.CountParams(raw);
         }
 
         public IDictionary<string, string> Parameter

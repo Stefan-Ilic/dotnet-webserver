@@ -8,9 +8,25 @@ namespace MyWebServer
 {
     public class Url : IUrl
     {
+        private string rawUrl;
+        private string path;
+        private Dictionary<string, string> parameter;
+        private int parameterCount;
+        private string[] segments;
+        private string fileName;
+        private string extension;
+        private string fragment;
+
         public Url()
         {
-
+            rawUrl = string.Empty;
+            path = string.Empty;
+            parameter = new Dictionary<string, string>();
+            parameterCount = 0;
+            segments = new string[0];
+            fileName = string.Empty;
+            extension = string.Empty;
+            fragment = string.Empty;
         }
 
         public Url(string raw)
@@ -20,42 +36,42 @@ namespace MyWebServer
 
         public IDictionary<string, string> Parameter
         {
-            get { throw new NotImplementedException(); }
+            get { return parameter; }
         }
 
         public int ParameterCount
         {
-            get { throw new NotImplementedException(); }
+            get { return parameterCount; }
         }
 
         public string Path
         {
-            get { throw new NotImplementedException(); }
+            get { return path; }
         }
 
         public string RawUrl
         {
-            get { throw new NotImplementedException(); }
+            get { return rawUrl; }
         }
 
         public string Extension
         {
-            get { throw new NotImplementedException(); }
+            get { return extension; }
         }
 
         public string FileName
         {
-            get { throw new NotImplementedException(); }
+            get { return fileName; }
         }
 
         public string Fragment
         {
-            get { throw new NotImplementedException(); }
+            get { return fragment; }
         }
 
         public string[] Segments
         {
-            get { throw new NotImplementedException(); }
+            get { return segments; }
         }
     }
 }

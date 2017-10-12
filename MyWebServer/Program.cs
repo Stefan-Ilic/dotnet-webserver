@@ -10,6 +10,11 @@ namespace MyWebServer
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+
+            var url = new Url("www.hallo.com?a=b&c=d");
+
+
             Console.WriteLine("\nHit the any key to exit...");
             Console.ReadKey();
         }

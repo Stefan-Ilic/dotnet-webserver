@@ -19,20 +19,38 @@ namespace MyWebServer
 
         public Url()
         {
-            rawUrl = string.Empty;
-            path = string.Empty;
+            /*rawUrl = "";
+            path = "";
             parameter = new Dictionary<string, string>();
             parameterCount = 0;
             segments = new string[0];
-            fileName = string.Empty;
-            extension = string.Empty;
-            fragment = string.Empty;
+            fileName = "";
+            extension = "";
+            fragment = "";
+            return;*/
         }
 
         public Url(string raw)
         {
             rawUrl = raw;
             parameterCount = Utility.CountParams(raw);
+            string[] splitUrl = raw.Split('?');
+            string allParams;
+            //splitUrl.Length != 2 ? allParams = "" : allParams = splitUrl[1];
+            if (splitUrl.Length != 2)
+            {
+                allParams = "";
+            }
+            else
+            {
+                allParams = splitUrl[1];
+            }
+            path = splitUrl[0];
+            var allPairs = allParams.Split('&').Select(x => x.Split('='));
+            foreach (var item in allPairs)
+            {
+                parameter.Add(item[0], item[1]);
+            }
         }
 
         public IDictionary<string, string> Parameter

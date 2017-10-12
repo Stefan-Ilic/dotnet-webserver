@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 
 namespace MyWebServer
@@ -32,5 +33,23 @@ namespace MyWebServer
             }
             return count;
         }
+
+        /*public static string RealPath(string url)
+        {
+            /*string path = String.Empty;
+
+            foreach (char c in url)
+            {
+                if (c != '?')
+                {
+                    path += c;
+                }
+                else
+                {
+                    return path;
+                }
+            }
+            return path;
+        }*/
     }
 }

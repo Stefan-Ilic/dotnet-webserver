@@ -12,7 +12,9 @@ namespace MyWebServer
             Console.WriteLine("Hello World!");
 
 
-            var url = new Url("www.hallo.com?a=b&c=d");
+            var testurl = new Url("www.hello.com?a=b&c=d");
+
+           Console.WriteLine("Number or params: {0}", testurl.ParameterCount);
 
 
             Console.WriteLine("\nHit the any key to exit...");

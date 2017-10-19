@@ -15,6 +15,11 @@ namespace MyWebServer
 
         public Url(string raw)
         {
+            if (raw == null)
+            {
+                return;
+            }
+
             RawUrl = raw;
             var splitUrl = raw.Split('?');
             var allParams = splitUrl.Length != 2 ? "" : splitUrl[1];

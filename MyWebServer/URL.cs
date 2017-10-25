@@ -36,19 +36,12 @@ namespace MyWebServer
         }
 
         public IDictionary<string, string> Parameter { get; } = new Dictionary<string, string>();
-
         public int ParameterCount { get; } = 0;
-
         public string Path { get; } = "";
-
         public string RawUrl { get; } = "";
-
         public string Extension { get; } = "";
-
         public string FileName { get; } = "";
-
         public string Fragment { get; } = "";
-
         public string[] Segments { get; } = new string[0];
     }
 }

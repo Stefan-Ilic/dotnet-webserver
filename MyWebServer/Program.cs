@@ -14,7 +14,7 @@ namespace MyWebServer
             Console.WriteLine("Hello World!");
 
             var obj = new Response();
-            obj.StatusCode = 200;
+           // obj.StatusCode = 200;
             Console.WriteLine(obj.Status);
 
             Console.WriteLine("\nHit the any key to exit...");

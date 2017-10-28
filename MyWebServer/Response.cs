@@ -9,9 +9,10 @@ namespace MyWebServer
 {
     public class Response : IResponse
     {
+        private int _statusCode;
         public Response()
         {
- 
+
         }
 
         public void AddHeader(string header, string value)
@@ -28,28 +29,43 @@ namespace MyWebServer
 
         public void SetContent(string content)
         {
-            
+
         }
 
         public void SetContent(byte[] content)
         {
-            
+
         }
 
         public void SetContent(Stream stream)
         {
-            
+
         }
 
         public void Send(Stream network)
         {
-            
+
         }
 
         public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
         public int ContentLength { get; } = 0;
         public string ContentType { get; set; }
-        public int StatusCode { get; set; }
+
+        public int StatusCode
+        {
+            get
+            {
+                if (_statusCode == 0)
+                {
+                    throw new StatusCodeNotSetException();
+                }
+                return _statusCode;
+            }
+            set
+            {
+                _statusCode = value;
+            }
+        }
 
         public string Status
         {
@@ -64,7 +80,7 @@ namespace MyWebServer
                     case 500:
                         return "500 Internal Server Error";
                     default:
-                        return "chandler > ross pre monica but ross > chandler post monica";
+                        return "2 + 2 is 4 minus 1 that's 3 QUICK MAFS";
                 }
             }
         }

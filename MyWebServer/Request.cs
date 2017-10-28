@@ -3,18 +3,38 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
     public class Request : IRequest
     {
+        private readonly Regex _requestPattern = new Regex(@"^([A-Za-z]+)(\s+)\/(.*)(\s+)(HTTP\/)([0-9].[0-9]).*");
+
         public Request(Stream requestStream)
         {
             using (var sr = new StreamReader(requestStream))
             {
-                Headers["method"] = sr.ReadLine().Split(' ')[0].ToUpper();
-                Method = Headers["method"];
+                IsValid = _requestPattern.IsMatch(sr.ReadToEnd());
+                if (IsValid)
+                {
+                    requestStream.Seek(0, SeekOrigin.Begin);
+                    var requestLine = sr.ReadLine().Split(' ');
+                    Method = requestLine[0].ToUpper();
+                    Url = new Url(requestLine[1]);
+
+                    while (sr.Peek() >= 0)
+                    {
+                        var tempSplit = sr.ReadLine().Split(' ');
+                        var tempKey = tempSplit.Length == 2 ? tempSplit[0].TrimEnd(':').ToLower() : "";
+                        var tempVal = tempSplit.Length == 2 ? tempSplit[1].TrimEnd('\r', '\n') : "";
+                        if (tempKey != String.Empty && tempVal != String.Empty)
+                        {
+                            Headers.Add(tempKey, tempVal);
+                        }
+                    }
+                }
             }
         }
 

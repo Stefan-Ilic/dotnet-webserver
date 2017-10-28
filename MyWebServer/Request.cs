@@ -9,10 +9,15 @@ namespace MyWebServer
 {
     public class Request : IRequest
     {
-        public Request(Stream network)
+        public Request(Stream requestStream)
         {
-
+            using (var sr = new StreamReader(requestStream))
+            {
+                Headers["method"] = sr.ReadLine().Split(' ')[0].ToUpper();
+                Method = Headers["method"];
+            }
         }
+
         public bool IsValid { get; }
         public string Method { get; }
         public IUrl Url { get; } = new Url();

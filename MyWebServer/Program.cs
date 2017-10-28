@@ -17,13 +17,13 @@ namespace MyWebServer
             //StreamReader s = new StreamReader(Stream network);
             //string blah = s.ReadToEnd();
 
-            var stream2 = new MemoryStream(new byte[1234]);
+            //var stream2 = new MemoryStream(new byte[1234]);
 
             //StreamReader sr = new StreamReader(stream2);
             //string blah = sr.ReadToEnd();
             //Console.WriteLine(blah);
 
-            var test = new Request(stream2);
+            //var test = new Request(stream2);
 
             //var test2 = new Response();
 

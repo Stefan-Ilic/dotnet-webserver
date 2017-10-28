@@ -11,18 +11,19 @@ namespace MyWebServer
     {
         public Response()
         {
-
+ 
         }
-        public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
-        public int ContentLength { get; } = 0;
-        public string ContentType { get; set; }
-        public int StatusCode { get; set; }
-        public string Status { get; }
-        public string ServerHeader { get; set; } = "BIF-SWE1-Server";
 
         public void AddHeader(string header, string value)
         {
-            
+            if (Headers.ContainsKey(header))
+            {
+                Headers[header] = value;
+            }
+            else
+            {
+                Headers.Add(header, value);
+            }
         }
 
         public void SetContent(string content)
@@ -44,5 +45,30 @@ namespace MyWebServer
         {
             
         }
+
+        public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
+        public int ContentLength { get; } = 0;
+        public string ContentType { get; set; }
+        public int StatusCode { get; set; }
+
+        public string Status
+        {
+            get
+            {
+                switch (StatusCode)
+                {
+                    case 200:
+                        return "200 OK";
+                    case 404:
+                        return "404 Not Found";
+                    case 500:
+                        return "500 Internal Server Error";
+                    default:
+                        return "chandler > ross pre monica but ross > chandler post monica";
+                }
+            }
+        }
+
+        public string ServerHeader { get; set; } = "BIF-SWE1-Server";
     }
 }

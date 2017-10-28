@@ -23,7 +23,9 @@ namespace MyWebServer
             RawUrl = raw;
             var splitUrl = raw.Split('?');
             var allParams = splitUrl.Length != 2 ? "" : splitUrl[1];
-            Path = splitUrl[0];
+            var pathSplitFragment = splitUrl[0].Split('#');
+            Path = pathSplitFragment[0];
+            Fragment = pathSplitFragment.Length == 2 ? pathSplitFragment[1] : "";
             var allPairs = allParams.Split('&').Select(x => x.Split('='));
             if (allParams != "")
             {
@@ -33,6 +35,7 @@ namespace MyWebServer
                 }
             }
             ParameterCount = Parameter.Count();
+            Segments = Path.Split('/').Skip(1).ToArray();
         }
 
         public IDictionary<string, string> Parameter { get; } = new Dictionary<string, string>();

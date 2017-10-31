@@ -1,6 +1,6 @@
 bin
 obj
 *.suo
-deploy/
+deploy/**
 /MyWebServer/*.user
 .vs

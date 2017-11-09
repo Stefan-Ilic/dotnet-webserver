@@ -8,15 +8,18 @@ namespace MyWebServer
 {
     class PluginManager : IPluginManager
     {
+        private List<IPlugin> _plugins = new List<IPlugin>();
 
         public void Add(IPlugin plugin)
         {
-            
+            if (!Plugins.Contains(plugin))
+            {
+                _plugins.Add(plugin);
+            }
         }
 
         public void Add(string plugin)
         {
-            
         }
 
         public void Clear()
@@ -24,6 +27,9 @@ namespace MyWebServer
             
         }
 
-        public IEnumerable<IPlugin> Plugins { get; } = new List<IPlugin>();
+        public IEnumerable<IPlugin> Plugins
+        {
+            get { return _plugins; }
+        }
     }
 }

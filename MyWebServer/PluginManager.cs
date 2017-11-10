@@ -27,9 +27,6 @@ namespace MyWebServer
             
         }
 
-        public IEnumerable<IPlugin> Plugins
-        {
-            get { return _plugins; }
-        }
+        public IEnumerable<IPlugin> Plugins => _plugins;
     }
 }

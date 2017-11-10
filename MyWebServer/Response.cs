@@ -44,7 +44,9 @@ namespace MyWebServer
 
         public void Send(Stream network)
         {
-
+            var writer = new BinaryWriter(network);
+            writer.Write(Encoding.ASCII.GetBytes("HTTP/1."));
+            writer.Write(Encoding.ASCII.GetBytes(Status));
         }
 
         public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
@@ -61,10 +63,7 @@ namespace MyWebServer
                 }
                 return _statusCode;
             }
-            set
-            {
-                _statusCode = value;
-            }
+            set => _statusCode = value;
         }
 
         public string Status

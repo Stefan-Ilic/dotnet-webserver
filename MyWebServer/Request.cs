@@ -31,13 +31,18 @@ namespace MyWebServer
 
                 while (sr.Peek() >= 0)
                 {
-                    var tempSplit = sr.ReadLine().Split(' ');
-                    var tempKey = tempSplit.Length == 2 ? tempSplit[0].TrimEnd(':').ToLower() : "";
-                    var tempVal = tempSplit.Length == 2 ? tempSplit[1].TrimEnd('\r', '\n') : "";
+                    var tempSplit = sr.ReadLine().Split(':');
+                    var tempKey = tempSplit.Length == 2 ? tempSplit[0].ToLower() : "";
+                    var tempVal = tempSplit.Length == 2 ? tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n') : "";
                     if (tempKey != string.Empty && tempVal != string.Empty)
                     {
                         Headers.Add(tempKey, tempVal);
                     }
+                }
+                HeaderCount = Headers.Count();
+                if (Headers.ContainsKey("user-agent"))
+                {
+                    UserAgent = Headers["user-agent"];
                 }
             }
         }

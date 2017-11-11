@@ -44,10 +44,13 @@ namespace MyWebServer
 
         public void Send(Stream network)
         {
-            var sw = new StreamWriter(network, Encoding.ASCII);
-            //var writer = new BinaryWriter(network);
-            sw.WriteLine("HTTP/1.1");
-            sw.WriteLine(Status);
+            var writer = new BinaryWriter(network);
+            writer.Write(Encoding.ASCII.GetBytes("HTTP/1.1 " + Status + "\r\n"));
+
+            foreach (var entry in Headers)
+            {
+                writer.Write(Encoding.ASCII.GetBytes(entry.Key + ": " + entry.Value + "\r\n"));
+            }
         }
 
         public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();

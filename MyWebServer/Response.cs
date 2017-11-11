@@ -10,6 +10,9 @@ namespace MyWebServer
     public class Response : IResponse
     {
         private int _statusCode;
+        private string _serverHeader = "BIF-SWE1-Server";
+        private string _content = "";
+
         public Response()
         {
 
@@ -29,7 +32,7 @@ namespace MyWebServer
 
         public void SetContent(string content)
         {
-
+            _content = content;
         }
 
         public void SetContent(byte[] content)
@@ -51,10 +54,20 @@ namespace MyWebServer
             {
                 writer.Write(Encoding.ASCII.GetBytes(entry.Key + ": " + entry.Value + "\r\n"));
             }
+            writer.Write(Encoding.ASCII.GetBytes("\r\n"));
+
+            if (string.IsNullOrEmpty(_content) && !string.IsNullOrEmpty(ContentType))
+            {
+                throw new ContentNotSetException();
+            }
+
+            writer.Write(Encoding.UTF8.GetBytes(_content));
+
         }
 
-        public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
-        public int ContentLength { get; } = 0;
+        public IDictionary<string, string> Headers { get; } =
+            new Dictionary<string, string> {{"Server", "BIF-SWE1-Server"}};
+        public int ContentLength => Encoding.UTF8.GetByteCount(_content);
         public string ContentType { get; set; }
 
         public int StatusCode
@@ -88,6 +101,15 @@ namespace MyWebServer
             }
         }
 
-        public string ServerHeader { get; set; } = "BIF-SWE1-Server";
+        public string ServerHeader
+        {
+            get => _serverHeader;
+
+            set
+            {
+                _serverHeader = value;
+                AddHeader("Server", _serverHeader);
+            }
+        }
     }
 }

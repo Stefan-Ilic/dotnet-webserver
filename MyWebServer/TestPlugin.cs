@@ -16,7 +16,7 @@ namespace MyWebServer
             {
                 return 1;
             }
-            return Regex.Matches(req.Url.RawUrl.ToLower(), "test").Count * 0.01f;
+            return Regex.Matches(url, "test").Count * 0.01f;
         }
 
         public IResponse Handle(IRequest req)

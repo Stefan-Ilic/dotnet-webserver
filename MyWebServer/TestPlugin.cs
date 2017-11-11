@@ -11,7 +11,7 @@ namespace MyWebServer
     {
         public float CanHandle(IRequest req)
         {
-            var url = req.Url.RawUrl.ToLower();
+            var url = req.Url.RawUrl.ToLower(); // is this cheating?
             if (url == "/")
             {
                 return 1;

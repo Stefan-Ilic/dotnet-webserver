@@ -32,17 +32,38 @@ namespace MyWebServer
                 while (sr.Peek() >= 0)
                 {
                     var tempSplit = sr.ReadLine().Split(':');
-                    var tempKey = tempSplit.Length == 2 ? tempSplit[0].ToLower() : "";
-                    var tempVal = tempSplit.Length == 2 ? tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n') : "";
-                    if (tempKey != string.Empty && tempVal != string.Empty)
+                    if (tempSplit.Length == 2)
                     {
-                        Headers.Add(tempKey, tempVal);
+                        var tempKey = tempSplit[0].ToLower();
+                        var tempVal = tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n');
+                        if (tempKey != string.Empty && tempVal != string.Empty)
+                        {
+                            Headers.Add(tempKey, tempVal);
+                        }
                     }
+                    else
+                    {
+                        ContentString = sr.ReadLine();
+                        if (!string.IsNullOrEmpty(ContentString))
+                        {
+                            ContentBytes = Encoding.UTF8.GetBytes(ContentString);
+                            ContentStream = new MemoryStream(ContentBytes);
+                        }
+                    }
+
                 }
                 HeaderCount = Headers.Count();
                 if (Headers.ContainsKey("user-agent"))
                 {
                     UserAgent = Headers["user-agent"];
+                }
+                if (Headers.ContainsKey("content-type"))
+                {
+                    ContentType = Headers["content-type"];
+                }
+                if (Headers.ContainsKey("content-length"))
+                {
+                    ContentLength = Int32.Parse(Headers["content-length"]);
                 }
             }
         }

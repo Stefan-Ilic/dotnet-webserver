@@ -11,7 +11,7 @@ namespace MyWebServer
     {
         private int _statusCode;
         private string _serverHeader = "BIF-SWE1-Server";
-        private string _content = "";
+        private byte[] _content = new byte[0];
 
         public Response()
         {
@@ -32,17 +32,19 @@ namespace MyWebServer
 
         public void SetContent(string content)
         {
-            _content = content;
+            _content = Encoding.UTF8.GetBytes(content);
         }
 
         public void SetContent(byte[] content)
         {
-
+            _content = content;
         }
 
         public void SetContent(Stream stream)
         {
-
+            var ms = new MemoryStream();
+            stream.CopyTo(ms);
+            _content = ms.ToArray();
         }
 
         public void Send(Stream network)
@@ -56,18 +58,18 @@ namespace MyWebServer
             }
             writer.Write(Encoding.ASCII.GetBytes("\r\n"));
 
-            if (string.IsNullOrEmpty(_content) && !string.IsNullOrEmpty(ContentType))
+            if (ContentLength == 0 && !string.IsNullOrEmpty(ContentType))
             {
                 throw new ContentNotSetException();
             }
 
-            writer.Write(Encoding.UTF8.GetBytes(_content));
+            writer.Write(_content);
 
         }
 
         public IDictionary<string, string> Headers { get; } =
             new Dictionary<string, string> {{"Server", "BIF-SWE1-Server"}};
-        public int ContentLength => Encoding.UTF8.GetByteCount(_content);
+        public int ContentLength => _content.Length;
         public string ContentType { get; set; }
 
         public int StatusCode

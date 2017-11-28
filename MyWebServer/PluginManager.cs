@@ -10,6 +10,11 @@ namespace MyWebServer
     {
         private List<IPlugin> _plugins = new List<IPlugin>();
 
+        public PluginManager()
+        {
+            Add(new TestPlugin());
+        }
+
         public void Add(IPlugin plugin)
         {
             if (!Plugins.Contains(plugin))
@@ -24,7 +29,7 @@ namespace MyWebServer
 
         public void Clear()
         {
-            
+            _plugins.Clear();
         }
 
         public IEnumerable<IPlugin> Plugins => _plugins;

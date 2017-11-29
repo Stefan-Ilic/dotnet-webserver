@@ -8,6 +8,11 @@ namespace MyWebServer
 {
     public class StaticFilePlugin : IPlugin
     {
+        public StaticFilePlugin()
+        {
+            
+        }
+
         public float CanHandle(IRequest req)
         {
             return 0.1f;

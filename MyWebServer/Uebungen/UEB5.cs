@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using BIF.SWE1.Interfaces;
@@ -9,6 +10,7 @@ namespace Uebungen
 {
     public class UEB5 : IUEB5
     {
+        private string _statiFileFolder;
         public void HelloWorld()
         {
         }
@@ -25,17 +27,17 @@ namespace Uebungen
 
         public IPlugin GetStaticFilePlugin()
         {
-            throw new NotImplementedException();
+            return new StaticFilePlugin();
         }
 
         public string GetStaticFileUrl(string fileName)
         {
-            throw new NotImplementedException();
+            return Path.Combine(_statiFileFolder, fileName);
         }
 
         public void SetStatiFileFolder(string folder)
         {
-            throw new NotImplementedException();
+            _statiFileFolder = folder;
         }
     }
 }

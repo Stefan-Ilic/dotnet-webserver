@@ -6,13 +6,17 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
-    class PluginManager : IPluginManager
+    public class PluginManager : IPluginManager
     {
         private List<IPlugin> _plugins = new List<IPlugin>();
 
         public PluginManager()
         {
-            Add(new TestPlugin());
+            //Add(new TestPlugin());
+            Add(new StaticFilePlugin());
+            Add(new NaviPlugin());
+            Add(new TempPlugin());
+            Add(new ToLowerPlugin());
         }
 
         public void Add(IPlugin plugin)

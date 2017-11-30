@@ -61,6 +61,11 @@ namespace MyWebServer
             _plugins.Clear();
         }
 
+        public IPlugin GetPlugin(Request req)
+        {
+            return _plugins.Select(i => new { Value = i.CanHandle(req), Plugin = i }).OrderBy(i => i.Value).Last().Plugin;
+        }
+
         public IEnumerable<IPlugin> Plugins => _plugins;
     }
 }

@@ -13,36 +13,38 @@ namespace MyWebServer
         private readonly Regex _requestPattern = new Regex(@"^(GET|POST|PUT|DELETE|get|post|put|delete)(\s+)(.*)(\s+)(HTTP\/)(1\.[0-9])$");
         public Request(Stream requestStream)
         {
-            using (var sr = new StreamReader(requestStream))
+            var sr = new StreamReader(requestStream);
+            var firstline = sr.ReadLine();
+            if (firstline == null)
             {
-                var firstline = sr.ReadLine();
-                if (firstline == null)
-                {
-                    return;
-                }
-                IsValid = _requestPattern.IsMatch(firstline);
-                if (!IsValid)
-                {
-                    return;
-                }
-                var requestLine = firstline.Split(' ');
-                Method = requestLine[0].ToUpper();
-                Url = new Url(requestLine[1]);
+                return;
+            }
+            IsValid = _requestPattern.IsMatch(firstline);
+            if (!IsValid)
+            {
+                return;
+            }
+            var requestLine = firstline.Split(' ');
+            Method = requestLine[0].ToUpper();
+            Url = new Url(requestLine[1]);
 
-                while (sr.Peek() >= 0)
+            while (sr.Peek() >= 0)
+            {
+                var tempSplit = sr.ReadLine().Split(':');
+                if (tempSplit.Length == 2)
                 {
-                    var tempSplit = sr.ReadLine().Split(':');
-                    if (tempSplit.Length == 2)
+                    var tempKey = tempSplit[0].ToLower();
+                    var tempVal = tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n');
+                    if (tempKey != string.Empty && tempVal != string.Empty)
                     {
-                        var tempKey = tempSplit[0].ToLower();
-                        var tempVal = tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n');
-                        if (tempKey != string.Empty && tempVal != string.Empty)
-                        {
-                            Headers.Add(tempKey, tempVal);
-                        }
+                        Headers.Add(tempKey, tempVal);
                     }
-                    else
+                }
+                else
+                {
+                    if (Method == "POST")
                     {
+
                         ContentString = sr.ReadLine();
                         if (!string.IsNullOrEmpty(ContentString))
                         {
@@ -50,22 +52,22 @@ namespace MyWebServer
                             ContentStream = new MemoryStream(ContentBytes);
                         }
                     }
-
-                }
-                HeaderCount = Headers.Count();
-                if (Headers.ContainsKey("user-agent"))
-                {
-                    UserAgent = Headers["user-agent"];
-                }
-                if (Headers.ContainsKey("content-type"))
-                {
-                    ContentType = Headers["content-type"];
-                }
-                if (Headers.ContainsKey("content-length"))
-                {
-                    ContentLength = Int32.Parse(Headers["content-length"]);
                 }
             }
+            HeaderCount = Headers.Count();
+            if (Headers.ContainsKey("user-agent"))
+            {
+                UserAgent = Headers["user-agent"];
+            }
+            if (Headers.ContainsKey("content-type"))
+            {
+                ContentType = Headers["content-type"];
+            }
+            if (Headers.ContainsKey("content-length"))
+            {
+                ContentLength = Int32.Parse(Headers["content-length"]);
+            }
+            //}
         }
 
         public bool IsValid { get; } = false;

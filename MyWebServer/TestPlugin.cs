@@ -21,11 +21,12 @@ namespace MyWebServer
 
         public IResponse Handle(IRequest req)
         {
+            Console.WriteLine("The TestPlugin is currently Handling the Request\n");
             var obj = new Response
             {
                 StatusCode = 200
             };
-            obj.SetContent("I wear a jacket indoors because man's not hot");
+            obj.SetContent("<html><body><h1>HOMEPAGE BOII</h1></body></html>");
             return obj;
         }
     }

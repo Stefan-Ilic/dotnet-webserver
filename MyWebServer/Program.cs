@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using BIF.SWE1.Interfaces;
 
@@ -11,27 +13,57 @@ namespace MyWebServer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TcpListener server = null;
+            try
+            {
+                // Set the TcpListener on port 8080.
+                const int port = 8080;
+                var localAddr = IPAddress.Parse("127.0.0.1");
 
-            var ms = new MemoryStream();
-            var sw = new StreamWriter(ms, Encoding.ASCII);
+                // Instance TcpListener
+                server = new TcpListener(localAddr, port);
 
-            string url = "/";
-            string method = "GET";
-            string host = "localhost";
+                // Start listening for client requests.
+                server.Start();
 
-            sw.WriteLine("{0} {1} HTTP/1.1", method, url);
-            sw.WriteLine("Host: {0}", host);
-            sw.WriteLine("Connection: keep-alive");
-            sw.WriteLine("Accept: text/html,application/xhtml+xml");
-            sw.WriteLine("User-Agent: Unit-Test-Agent/1.0 (The OS)");
-            sw.WriteLine("Accept-Encoding: gzip,deflate,sdch");
-            sw.WriteLine("Accept-Language: de-AT,de;q=0.8,en-US;q=0.6,en;q=0.4");
+                // Enter the listening loop.
+                while (true)
+                {
+                    Console.Write("Waiting for a connection... ");
 
-            var test1 = new Request(ms);
+                    // Perform a blocking call to accept requests.
+                    var client = server.AcceptTcpClient();
+                    Console.WriteLine("Connected!");
 
-            Console.WriteLine("\nHit the any key to exit...");
-            Console.ReadKey();
+                    // Get a stream object for reading and writing
+                    var network = client.GetStream();
+
+                    // Instance a new PluginManager
+                    var pluginManager = new PluginManager();
+
+                    // Obtain Request from network stream
+                    var req = new Request(network);
+
+                    // Select Plugin and send back to network stream
+                    pluginManager.GetPlugin(req).Handle(req).Send(network);
+
+                    // Shutdown and end connection
+                    client.Close();
+                }
+            }
+            catch (SocketException e)
+            {
+                Console.WriteLine("SocketException: {0}", e);
+            }
+            finally
+            {
+                // Stop listening for new clients.
+                server.Stop();
+            }
+
+
+            Console.WriteLine("\nHit enter to continue...");
+            Console.Read();
         }
     }
 }

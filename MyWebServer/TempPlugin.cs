@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using BIF.SWE1.Interfaces;
@@ -15,12 +16,12 @@ namespace MyWebServer
 
         public IResponse Handle(IRequest req)
         {
-            var obj = new Response
+            var resp = new Response();
+            if (!File.Exists(req.Url.Path))
             {
-                StatusCode = 200
-            };
-            obj.SetContent("I wear a jacket indoors because man's not hot");
-            return obj;
+                resp.StatusCode = 404;
+            }
+            return resp;
         }
     }
 }

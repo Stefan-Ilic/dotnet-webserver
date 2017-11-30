@@ -10,7 +10,7 @@ namespace MyWebServer
 {
     public class Request : IRequest
     {
-        private readonly Regex _requestPattern = new Regex(@"^(GET|POST|PUT|DELETE|get|post|put|delete)(\s+)\/(.*)(\s+)(HTTP\/)(1\.[0-9])$");
+        private readonly Regex _requestPattern = new Regex(@"^(GET|POST|PUT|DELETE|get|post|put|delete)(\s+)(.*)(\s+)(HTTP\/)(1\.[0-9])$");
         public Request(Stream requestStream)
         {
             using (var sr = new StreamReader(requestStream))

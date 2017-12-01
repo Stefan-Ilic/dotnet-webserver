@@ -22,6 +22,7 @@ namespace MyWebServer
         
         public IResponse Handle(IRequest req)
         {
+            Console.WriteLine("The ToLower plugin is currently Handling the Request\n");
             var resp = new Response();
             var text = req.ContentString.TrimStart("text=".ToCharArray()).ToLower();
             resp.SetContent(string.IsNullOrWhiteSpace(text) ? "Bitte geben Sie einen Text ein" : text);

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,7 +27,8 @@ namespace MyWebServer
             {
                 StatusCode = 200
             };
-            obj.SetContent("<html><body><h1>HOMEPAGE BOII</h1></body></html>");
+            const string pathToIndex = @"C:\projects\SWE1\SWE1-CS\MyWebSite\index.html";
+            obj.SetContent(File.ReadAllText(pathToIndex));
             return obj;
         }
     }

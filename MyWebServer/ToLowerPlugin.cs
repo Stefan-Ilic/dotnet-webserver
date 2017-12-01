@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
@@ -11,16 +12,20 @@ namespace MyWebServer
     {
         public float CanHandle(IRequest req)
         {
-            return 0.1f;
+            var url = req.Url.RawUrl.ToLower();
+            if (url == "/tolower")
+            {
+                return 1;
+            }
+            return Regex.Matches(url, "tolower").Count * 0.01f;
         }
-
+        
         public IResponse Handle(IRequest req)
         {
             var resp = new Response();
-            if (!File.Exists(req.Url.Path))
-            {
-                resp.StatusCode = 404;
-            }
+            var text = req.ContentString.TrimStart("text=".ToCharArray()).ToLower();
+            resp.SetContent(string.IsNullOrWhiteSpace(text) ? "Bitte geben Sie einen Text ein" : text);
+            resp.StatusCode = 200;
             return resp;
         }
     }

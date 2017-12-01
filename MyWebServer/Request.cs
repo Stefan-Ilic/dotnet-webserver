@@ -67,7 +67,6 @@ namespace MyWebServer
             {
                 ContentLength = Int32.Parse(Headers["content-length"]);
             }
-            //}
         }
 
         public bool IsValid { get; } = false;

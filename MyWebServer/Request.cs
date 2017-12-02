@@ -26,6 +26,7 @@ namespace MyWebServer
             }
             var requestLine = firstline.Split(' ');
             Method = requestLine[0].ToUpper();
+            Console.WriteLine("It's a {0} Request!!!", Method);
             Url = new Url(requestLine[1]);
 
             while (sr.Peek() >= 0)

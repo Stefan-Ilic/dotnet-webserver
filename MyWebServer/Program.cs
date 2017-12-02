@@ -44,8 +44,11 @@ namespace MyWebServer
                     // Obtain Request from network stream
                     var req = new Request(network);
 
-                    // Select Plugin and send back to network stream
-                    pluginManager.GetPlugin(req).Handle(req).Send(network);
+                    if (req.IsValid)
+                    {
+                        // Select Plugin and send back to network stream
+                        pluginManager.GetPlugin(req).Handle(req).Send(network);
+                    }
 
                     // Shutdown and end connection
                     client.Close();

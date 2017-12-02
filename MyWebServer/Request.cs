@@ -19,6 +19,7 @@ namespace MyWebServer
             {
                 return;
             }
+            Console.WriteLine(firstline);
             IsValid = _requestPattern.IsMatch(firstline);
             if (!IsValid)
             {
@@ -26,13 +27,14 @@ namespace MyWebServer
             }
             var requestLine = firstline.Split(' ');
             Method = requestLine[0].ToUpper();
-            Console.WriteLine("It's a {0} Request!!!", Method);
             Url = new Url(requestLine[1]);
 
             while (sr.Peek() >= 0)
             {
-                var tempSplit = sr.ReadLine().Split(':');
-                if (tempSplit.Length == 2)
+                var rl = sr.ReadLine();
+                Console.WriteLine(rl);
+                var tempSplit = rl.Split(':');
+                if (tempSplit.Length >= 2)
                 {
                     var tempKey = tempSplit[0].ToLower();
                     var tempVal = tempSplit[1].TrimStart(' ').TrimEnd('\r', '\n');
@@ -45,8 +47,10 @@ namespace MyWebServer
                 {
                     if (Method == "POST")
                     {
-
+                        Console.WriteLine("about to print out content string");
                         ContentString = sr.ReadLine();
+                        Console.WriteLine("printing out content string");
+                        Console.WriteLine(ContentString);
                         if (!string.IsNullOrEmpty(ContentString))
                         {
                             ContentBytes = Encoding.UTF8.GetBytes(ContentString);
@@ -55,6 +59,7 @@ namespace MyWebServer
                     }
                 }
             }
+            Console.WriteLine("The loop is over now");
             HeaderCount = Headers.Count();
             if (Headers.ContainsKey("user-agent"))
             {
@@ -68,6 +73,7 @@ namespace MyWebServer
             {
                 ContentLength = Int32.Parse(Headers["content-length"]);
             }
+            Console.WriteLine("Just constructed Request!");
         }
 
         public bool IsValid { get; } = false;

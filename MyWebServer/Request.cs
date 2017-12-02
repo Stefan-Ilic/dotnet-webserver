@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using BIF.SWE1.Interfaces;
+using System.Web;
 
 namespace MyWebServer
 {
@@ -45,18 +48,14 @@ namespace MyWebServer
                 }
                 else
                 {
-                    if (Method == "POST")
-                    {
-                        Console.WriteLine("about to print out content string");
-                        ContentString = sr.ReadLine();
-                        Console.WriteLine("printing out content string");
-                        Console.WriteLine(ContentString);
-                        if (!string.IsNullOrEmpty(ContentString))
-                        {
-                            ContentBytes = Encoding.UTF8.GetBytes(ContentString);
-                            ContentStream = new MemoryStream(ContentBytes);
-                        }
-                    }
+                    if (Method != "POST" || !Headers.ContainsKey("content-length")) continue;
+                    var buffer = new char[int.Parse(Headers["content-length"])];
+                    sr.Read(buffer, 0, buffer.Length);
+                    ContentString = WebUtility.UrlDecode( new string(buffer));
+
+                    if (string.IsNullOrEmpty(ContentString)) continue;
+                    ContentBytes = Encoding.UTF8.GetBytes(ContentString);
+                    ContentStream = new MemoryStream(ContentBytes);
                 }
             }
             Console.WriteLine("The loop is over now");
@@ -71,7 +70,7 @@ namespace MyWebServer
             }
             if (Headers.ContainsKey("content-length"))
             {
-                ContentLength = Int32.Parse(Headers["content-length"]);
+                ContentLength = int.Parse(Headers["content-length"]);
             }
             Console.WriteLine("Just constructed Request!");
         }

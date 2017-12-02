@@ -27,7 +27,7 @@ namespace MyWebServer
             var text = req.ContentString.TrimStart("text=".ToCharArray()).ToLower();
             const string pathToHtml = @"C:\projects\SWE1\SWE1-CS\MyWebSite\tolower.html";
             var lines = File.ReadAllLines(pathToHtml);
-            const int lineWithPreTag = 14;
+            const int lineWithPreTag = 15;
             lines[lineWithPreTag - 1] = !string.IsNullOrWhiteSpace(text) ? "<pre>" + text + "</pre>" : "<pre> Bitte geben Sie einen Text ein </pre>";
             resp.SetContent(lines.SelectMany(s =>
                 Encoding.UTF8.GetBytes(s + Environment.NewLine)).ToArray());

@@ -3,14 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <title>To Lower</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h2>ToLower</h2>
-
-    <form action="/tolower" method="POST">
-        Text: <input type="text" name="text"><br>
-        <input type="submit" value="Submit">
-    </form>
-<pre></pre>
+    <div class="container">
+        <h2>ToLower</h2>
+        <pre></pre>
+        <form class="form-row align-items-center" action="/tolower" method="POST">
+            <div class="form-group">
+                <div class="input-group mb-2 mb-sm-0">
+                    <div class="input-group-addon">Text</div>
+                    <input name="text" type="text" class="form-control" id="inlineFormInputGroup">
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Abschicken" />
+        </form>
+    </div>
 </body>
 </html>

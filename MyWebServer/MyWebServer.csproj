@@ -51,21 +51,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
-    <Compile Include="NaviPlugin.cs" />
+    <Compile Include="LoadPluginAttribute.cs" />
+    <Compile Include="Plugins\NaviPlugin.cs" />
+    <Compile Include="Plugins\StartPagePlugin.cs" />
     <Compile Include="Resources\Pages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Pages.resx</DependentUpon>
     </Compile>
-    <Compile Include="StaticFilePlugin.cs" />
-    <Compile Include="TempPlugin.cs" />
-    <Compile Include="TestPlugin.cs" />
+    <Compile Include="Plugins\StaticFilePlugin.cs" />
+    <Compile Include="Plugins\TempPlugin.cs" />
+    <Compile Include="Plugins\TestPlugin.cs" />
     <Compile Include="PluginManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="Response.cs" />
-    <Compile Include="ToLowerPlugin.cs" />
+    <Compile Include="Plugins\ToLowerPlugin.cs" />
     <Compile Include="Uebungen\UEB1.cs" />
     <Compile Include="Uebungen\UEB2.cs" />
     <Compile Include="Uebungen\UEB3.cs" />

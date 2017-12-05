@@ -8,6 +8,7 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    [LoadPlugin]
     public class TestPlugin : IPlugin
     {
         public float CanHandle(IRequest req)
@@ -15,7 +16,7 @@ namespace MyWebServer
             var url = req.Url.RawUrl.ToLower();
             if (url == "/")
             {
-                return 1;
+                return 0.9f;
             }
             return Regex.Matches(url, "test").Count * 0.01f;
         }
@@ -27,7 +28,7 @@ namespace MyWebServer
             {
                 StatusCode = 200
             };
-            obj.SetContent(Resources.Pages.index);
+            obj.SetContent("Testitest");
             return obj;
         }
     }

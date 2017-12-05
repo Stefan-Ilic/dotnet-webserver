@@ -8,6 +8,7 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    [LoadPlugin]
     public class ToLowerPlugin : IPlugin
     {
         public float CanHandle(IRequest req)

@@ -7,6 +7,7 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    [LoadPlugin]
     public class NaviPlugin : IPlugin
     {
         public float CanHandle(IRequest req)

@@ -7,6 +7,7 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    [LoadPlugin]
     public class StaticFilePlugin : IPlugin
     {
         public StaticFilePlugin()

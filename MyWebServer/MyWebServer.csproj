@@ -52,6 +52,11 @@
   <ItemGroup>
     <Compile Include="Exceptions.cs" />
     <Compile Include="NaviPlugin.cs" />
+    <Compile Include="Resources\Pages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pages.resx</DependentUpon>
+    </Compile>
     <Compile Include="StaticFilePlugin.cs" />
     <Compile Include="TempPlugin.cs" />
     <Compile Include="TestPlugin.cs" />
@@ -73,6 +78,16 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="my.runsettings" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\index.html" />
+    <EmbeddedResource Include="Resources\tolower.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Pages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Pages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

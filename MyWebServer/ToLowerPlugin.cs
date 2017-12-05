@@ -25,12 +25,11 @@ namespace MyWebServer
             Console.WriteLine("The ToLower plugin is currently Handling the Request\n");
             var resp = new Response();
             var text = req.ContentString.TrimStart("text=".ToCharArray()).ToLower();
-            const string pathToHtml = @"C:\projects\SWE1\SWE1-CS\MyWebSite\tolower.html";
-            var lines = File.ReadAllLines(pathToHtml);
-            const int lineWithPreTag = 15;
-            lines[lineWithPreTag - 1] = !string.IsNullOrWhiteSpace(text) ? "<pre>" + text + "</pre>" : "<pre> Bitte geben Sie einen Text ein </pre>";
-            resp.SetContent(lines.SelectMany(s =>
-                Encoding.UTF8.GetBytes(s + Environment.NewLine)).ToArray());
+            //const string pathToHtml = @"C:\projects\SWE1\SWE1-CS\MyWebSite\tolower.html";
+            var lines = Resources.Pages.tolower.Replace("$$text$$", text);
+            //const int lineWithPreTag = 15;
+            //lines[lineWithPreTag - 1] = !string.IsNullOrWhiteSpace(text) ? "<pre>" + text + "</pre>" : "<pre> Bitte geben Sie einen Text ein </pre>";
+            resp.SetContent(lines);
             resp.StatusCode = 200;
             return resp;
         }

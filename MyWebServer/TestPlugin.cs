@@ -27,8 +27,7 @@ namespace MyWebServer
             {
                 StatusCode = 200
             };
-            const string pathToHtml = @"C:\projects\SWE1\SWE1-CS\MyWebSite\index.html";
-            obj.SetContent(File.ReadAllText(pathToHtml));
+            obj.SetContent(Resources.Pages.index);
             return obj;
         }
     }

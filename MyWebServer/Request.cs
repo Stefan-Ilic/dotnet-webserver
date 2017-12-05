@@ -22,7 +22,6 @@ namespace MyWebServer
             {
                 return;
             }
-            Console.WriteLine(firstline);
             IsValid = _requestPattern.IsMatch(firstline);
             if (!IsValid)
             {
@@ -35,7 +34,6 @@ namespace MyWebServer
             while (sr.Peek() >= 0)
             {
                 var rl = sr.ReadLine();
-                Console.WriteLine(rl);
                 var tempSplit = rl.Split(':');
                 if (tempSplit.Length >= 2)
                 {
@@ -58,7 +56,6 @@ namespace MyWebServer
                     ContentStream = new MemoryStream(ContentBytes);
                 }
             }
-            Console.WriteLine("The loop is over now");
             HeaderCount = Headers.Count();
             if (Headers.ContainsKey("user-agent"))
             {
@@ -72,7 +69,6 @@ namespace MyWebServer
             {
                 ContentLength = int.Parse(Headers["content-length"]);
             }
-            Console.WriteLine("Just constructed Request!");
         }
 
         public bool IsValid { get; } = false;

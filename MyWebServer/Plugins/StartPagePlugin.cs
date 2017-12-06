@@ -18,7 +18,7 @@ namespace MyWebServer
 
         public IResponse Handle(IRequest req)
         {
-            Console.WriteLine("The StartPagePlugin is currently Handling the Request\n");
+            Console.WriteLine("The StartPagePlugin is currently Handling the Request");
             var obj = new Response
             {
                 StatusCode = 200

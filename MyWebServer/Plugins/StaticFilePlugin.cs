@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Web;
 using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
@@ -25,17 +26,18 @@ namespace MyWebServer
         {
             Console.WriteLine("The StaticFile plugin is currently Handling the Request");
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var resp = new Response();
             var file = Path.Combine(wdir, req.Url.Path.TrimStart('/'));
+            var resp = new Response();
             if (File.Exists(file))
             {
                 resp.StatusCode = 200;
+                resp.AddHeader("content-type", MimeMapping.GetMimeMapping(file));
                 resp.SetContent(File.ReadAllBytes(file));
-
             }
             else
             {
                 resp.StatusCode = 404;
+                resp.SetContent(Resources.Pages._404);
             }
             return resp;
         }

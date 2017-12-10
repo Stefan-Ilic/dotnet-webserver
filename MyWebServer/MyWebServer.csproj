@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="Exceptions.cs" />
+    <Compile Include="Helper\SaxParser.cs" />
     <Compile Include="LoadPluginAttribute.cs" />
     <Compile Include="Plugins\NaviPlugin.cs" />
     <Compile Include="Plugins\StartPagePlugin.cs" />

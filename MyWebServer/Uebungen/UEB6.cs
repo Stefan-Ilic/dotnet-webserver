@@ -25,12 +25,12 @@ namespace Uebungen
 
         public string GetNaviUrl()
         {
-            throw new NotImplementedException();
+            return "/navi";
         }
 
         public IPlugin GetNavigationPlugin()
         {
-            throw new NotImplementedException();
+            return new NaviPlugin();
         }
 
         public IPlugin GetTemperaturePlugin()

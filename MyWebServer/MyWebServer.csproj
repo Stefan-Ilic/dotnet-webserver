@@ -38,9 +38,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BIF-SWE1.Interfaces">
-      <HintPath>..\Libs\BIF-SWE1.Interfaces.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -69,6 +66,7 @@
     <Compile Include="Request.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="Plugins\ToLowerPlugin.cs" />
+    <Compile Include="Uebungen\MyTests.cs" />
     <Compile Include="Uebungen\UEB1.cs" />
     <Compile Include="Uebungen\UEB2.cs" />
     <Compile Include="Uebungen\UEB3.cs" />
@@ -94,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\404.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\unit-tests\BIF-SWE1\CS\BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj">
+      <Project>{27c44945-cb10-48bf-ad69-457d496b32a2}</Project>
+      <Name>BIF-SWE1.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

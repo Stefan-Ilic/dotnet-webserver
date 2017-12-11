@@ -33,6 +33,11 @@ namespace MyWebServer
             {
                 message = "Bitte geben Sie eine Anfrage ein";
             }
+            else if (street == "update=straßenkarte neu aufbereiten")
+            {
+                message = "Die interne Karte wurde aktualisiert";
+                SaxParser.Update();
+            }
             else
             {
                 var cities = SaxParser.GetCities(street);

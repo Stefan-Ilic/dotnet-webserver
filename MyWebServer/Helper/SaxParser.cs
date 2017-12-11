@@ -9,25 +9,37 @@ namespace MyWebServer.Helper
 {
     public class SaxParser
     {
+        private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\small.osm";
+        public static Dictionary<string, List<string>> Cities { get; set; } = new Dictionary<string, List<string>>();
+        public static bool IsUpdated { get; set; } = false;
+
+        /// <summary>
+        /// Accepts a street-string and returns a List of strings with all cities containing that street according to the provided OSM file. If the Cities Dictionary has been filled, this method will search there directly
+        /// </summary>
+        /// <param name="street"></param>
+        /// <returns></returns>
         public static List<string> GetCities(string street)
         {
+            if (IsUpdated)
+            {
+                return Cities[street];
+            }
             var cities = new List<string>();
-            const string file = @"C:\projects\SWE1\SWE1-CS\deploy\Vienna.osm";
-            using (var fs = File.OpenRead(file))
+            using (var fs = File.OpenRead(OsmFile))
             using (var xml = new System.Xml.XmlTextReader(fs))
             {
                 while (xml.Read())
                 {
                     if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
                     {
-                        cities = GetCityFromNodes(xml, street);
+                        cities = GetCitiesFromNodes(xml, street);
                     }
                 }
             }
             return cities;
         }
 
-        private static List<string> GetCityFromNodes(System.Xml.XmlTextReader xml, string street)
+        private static List<string> GetCitiesFromNodes(System.Xml.XmlTextReader xml, string street)
         {
             var cities = new List<string>();
             using (var osm = xml.ReadSubtree())
@@ -79,84 +91,61 @@ namespace MyWebServer.Helper
             pair.Add(street);
             return pair;
         }
-        //private string GetStreet(System.Xml.XmlReader osm)
-        //{
-        //    var street = "";
-        //    using (var element = osm.ReadSubtree())
-        //    {
-        //        while (element.Read())
-        //        {
-        //            if (element.NodeType == System.Xml.XmlNodeType.Element
-        //                && element.Name == "tag")
-        //            {
-        //                string tagType = element.GetAttribute("k");
-        //                string value = element.GetAttribute("v");
-        //                switch (tagType)
-        //                {
-        //                    case "addr:city":
-        //                        break;
-        //                    case "addr:street":
-        //                        street = value;
-        //                        break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //    return street;
-        //}
 
-        //public Dictionary<string, List<string>> Streets;
-        //public void Update()
-        //{
-        //    const string file = @"C:\projects\SWE1\SWE1-CS\deploy\Vienna.osm";
-        //    using (var fs = File.OpenRead(file))
-        //    using (var xml = new System.Xml.XmlTextReader(fs))
-        //    {
-        //        while (xml.Read())
-        //        {
-        //            if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
-        //            {
-        //                ReadNode(xml);
-        //            }
-        //        }
-        //    }
-        //}
+        /// <summary>
+        /// Traverses the provided OSM file and creates a replica of the content within the Cities Dictionary
+        /// </summary>
+        public static void Update()
+        {
+            using (var fs = File.OpenRead(OsmFile))
+            using (var xml = new System.Xml.XmlTextReader(fs))
+            {
+                while (xml.Read())
+                {
+                    if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
+                    {
+                        Cities.Clear(); //TODO add thread safety here
+                        IsUpdated = false;
+                        FillCitiesDictionary(xml);
+                        IsUpdated = true;
+                    }
+                }
+            }
+        }
 
-        //private void ReadAnyOsmElement(System.Xml.XmlReader osm)
-        //{
-        //    using (var element = osm.ReadSubtree())
-        //    {
-        //        while (element.Read())
-        //        {
-        //            if (element.NodeType == System.Xml.XmlNodeType.Element
-        //                && element.Name == "tag")
-        //            {
-        //                //ReadTag(element);
-        //                if (GetCity(element) != "" && GetStreet(element) != "")
-        //                {
-        //                    Console.WriteLine("The Node contains a city and a street");
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-        //private void ReadTag(System.Xml.XmlReader element)
-        //{
-        //    string tagType = element.GetAttribute("k");
-        //    string value = element.GetAttribute("v");
-        //    switch (tagType)
-        //    {
-        //        case "addr:city":
-        //            Console.WriteLine(value);
-        //            break;
-        //        //case "addr:postcode":
-        //        //    a.PostCode = value;
-        //        //    break;
-        //        case "addr:street":
-        //            Console.WriteLine(value);
-        //            break;
-        //    }
-        //}
+        private static void FillCitiesDictionary(System.Xml.XmlTextReader xml)
+        {
+            var streets = new List<string>();
+            var cities = new List<string>();
+            using (var osm = xml.ReadSubtree())
+            {
+                while (osm.Read())
+                {
+                    if (osm.NodeType == System.Xml.XmlNodeType.Element && (osm.Name == "node"))
+                    {
+                        var pair = GetCityAndStreet(osm);
+                        if (pair.Count == 2)
+                        {
+                            cities.Add(pair[0]);
+                            streets.Add(pair[1].ToLower());
+                        }
+                    }
+                }
+            }
+            for (var i = 0; i < streets.Count; i++)
+            {
+                if (!Cities.ContainsKey(streets[i]))
+                {
+                    Cities.Add(streets[i], new List<string> { cities[i] });
+                }
+                else
+                {
+                    if (!Cities[streets[i]].Contains(cities[i]))
+                    {
+                        Cities[streets[i]].Add(cities[i]); //TODO add thread safety here
+                    }
+                }
+            }
+        }
     }
 }

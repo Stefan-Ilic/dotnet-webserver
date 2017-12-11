@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\404.html" />
+    <Content Include="Resources\navi.html" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\unit-tests\BIF-SWE1\CS\BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj">

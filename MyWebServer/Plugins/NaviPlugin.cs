@@ -25,14 +25,21 @@ namespace MyWebServer
         public IResponse Handle(IRequest req)
         {
             Console.WriteLine("The Navi Plugin is currently handling the request");
-            var sax = new SaxParser();
-            sax.Update();
-
-
-
-
-            var resp = new Response();
-            resp.StatusCode = 404;
+            var street = req.ContentString.TrimStart("street=".ToCharArray()).ToLower();
+            var resp = new Response { StatusCode = 200 };
+            var content = "";
+            var message = "";
+            if (string.IsNullOrEmpty(street))
+            {
+                message = "Bitte geben Sie eine Anfrage ein";
+            }
+            else
+            {
+                var cities = SaxParser.GetCities(street);
+                message = cities.Count + " Orte gefunden";
+                content = cities.Aggregate(content, (current, city) => current + "<tr><td>" + city + "</td></tr>");
+            }
+            resp.SetContent(Resources.Pages.navi.Replace("$$message$$", message).Replace("$$cities$$", content));
             return resp;
         }
     }

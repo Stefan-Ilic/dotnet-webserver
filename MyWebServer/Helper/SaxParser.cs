@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MyWebServer.Helper
 {
     public class SaxParser
-    {
+    {//TODO XML tags for public properties
         private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\small.osm";
         public static Dictionary<string, List<string>> Cities { get; set; } = new Dictionary<string, List<string>>();
         public static bool IsUpdated { get; set; } = false;

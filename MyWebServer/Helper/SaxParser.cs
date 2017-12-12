@@ -9,7 +9,7 @@ namespace MyWebServer.Helper
 {
     public class SaxParser
     {//TODO XML tags for public properties
-        private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\small.osm";
+        private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Austria.osm";
         public static Dictionary<string, List<string>> Cities { get; set; } = new Dictionary<string, List<string>>();
         public static bool IsUpdated { get; set; } = false;
 
@@ -22,7 +22,7 @@ namespace MyWebServer.Helper
         {
             if (IsUpdated)
             {
-                return Cities[street];
+                return Cities[street]; //TODO check if street exists in dictionary
             }
             var cities = new List<string>();
             using (var fs = File.OpenRead(OsmFile))

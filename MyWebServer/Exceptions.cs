@@ -91,5 +91,5 @@ namespace MyWebServer
             StreamingContext context) : base(info, context)
         {
         }
-    }   
+    }
 }

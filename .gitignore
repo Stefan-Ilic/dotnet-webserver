@@ -4,3 +4,4 @@ obj
 deploy/**
 /MyWebServer/*.user
 .vs
+/MyWebServer/Uebungen/MyTests.cs

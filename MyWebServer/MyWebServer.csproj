@@ -38,11 +38,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BIF-SWE1.Interfaces">
-      <HintPath>..\Libs\BIF-SWE1.Interfaces.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Address.cs" />
     <Compile Include="Exceptions.cs" />
+    <Compile Include="Helper\SaxParser.cs" />
     <Compile Include="LoadPluginAttribute.cs" />
     <Compile Include="Plugins\NaviPlugin.cs" />
     <Compile Include="Plugins\StartPagePlugin.cs" />
@@ -68,6 +68,7 @@
     <Compile Include="Request.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="Plugins\ToLowerPlugin.cs" />
+    <Compile Include="Uebungen\MyTests.cs" />
     <Compile Include="Uebungen\UEB1.cs" />
     <Compile Include="Uebungen\UEB2.cs" />
     <Compile Include="Uebungen\UEB3.cs" />
@@ -90,6 +91,16 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Pages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\404.html" />
+    <Content Include="Resources\navi.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\unit-tests\BIF-SWE1\CS\BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj">
+      <Project>{27c44945-cb10-48bf-ad69-457d496b32a2}</Project>
+      <Name>BIF-SWE1.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

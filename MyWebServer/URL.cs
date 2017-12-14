@@ -36,6 +36,10 @@ namespace MyWebServer
             }
             ParameterCount = Parameter.Count();
             Segments = Path.Split('/').Skip(1).ToArray();
+            if (Segments.Length != 0 && Segments[Segments.Length - 1].Contains('.'))
+            {
+                Extension = Segments[Segments.Length - 1].Split('.')[1].ToLower();
+            }
         }
 
         public IDictionary<string, string> Parameter { get; } = new Dictionary<string, string>();

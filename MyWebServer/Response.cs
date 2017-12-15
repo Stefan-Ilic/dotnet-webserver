@@ -49,7 +49,6 @@ namespace MyWebServer
 
         public void Send(Stream network)
         {
-            Console.WriteLine("SENDING");
             var writer = new BinaryWriter(network);
             writer.Write(Encoding.ASCII.GetBytes("HTTP/1.1 " + Status + "\r\n"));
 

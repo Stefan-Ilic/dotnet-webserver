@@ -8,10 +8,18 @@ using System.Threading.Tasks;
 namespace MyWebServer.Helper
 {
     public class SaxParser
-    {//TODO XML tags for public properties
+    {
         //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Small.osm";
         private const string OsmFile = @"Mywebserver\Resources\Tiny.osm";
+
+        /// <summary>
+        /// A Dictionary with streets as keys and Lists of cities as values
+        /// </summary>
         public static Dictionary<string, List<string>> Cities { get; set; } = new Dictionary<string, List<string>>();
+
+        /// <summary>
+        /// A flag used to determine whether the Cities Dictionary has already been built
+        /// </summary>
         public static bool IsUpdated { get; set; } = false;
 
         /// <summary>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
@@ -12,7 +13,11 @@ namespace MyWebServer
     {
         public float CanHandle(IRequest req)
         {
-            return 0.1f;
+            if (req.Url.Segments.Contains("temp"))
+            {
+                return 1f;
+            }
+            return Regex.Matches(req.Url.RawUrl, "temp").Count * 0.02f;
         }
 
         public IResponse Handle(IRequest req)

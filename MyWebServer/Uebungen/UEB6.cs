@@ -35,17 +35,17 @@ namespace Uebungen
 
         public IPlugin GetTemperaturePlugin()
         {
-            throw new NotImplementedException();
+            return new TempPlugin();
         }
 
         public string GetTemperatureRestUrl(DateTime from, DateTime until)
         {
-            throw new NotImplementedException();
+            return from.ToString("yyyyMMdd") + "to" + until.ToString("yyyyMMdd");
         }
 
         public string GetTemperatureUrl(DateTime from, DateTime until)
         {
-            throw new NotImplementedException();
+            return "/temp/" + from.ToString("yyyyMMdd") + "to" + until.ToString("yyyyMMdd");
         }
 
         public IPlugin GetToLowerPlugin()

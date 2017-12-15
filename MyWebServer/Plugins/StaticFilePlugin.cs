@@ -27,7 +27,7 @@ namespace MyWebServer
             Console.WriteLine("The StaticFile plugin is currently Handling the Request");
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             string file;
-            if (req.Url.Path.Contains("./deploy"))
+            if (req.Url.Path.Contains("./deploy")) //if Jenkins won't give me a real URL then I won't treat him as a real WebClient
             {
                 file = "c:\\workspace\\BIF-WS17-SWE1-if16b072\\deploy" +
                        req.Url.Path.TrimStart("./deploy".ToCharArray());

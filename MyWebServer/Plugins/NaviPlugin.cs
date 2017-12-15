@@ -29,7 +29,11 @@ namespace MyWebServer
             var resp = new Response { StatusCode = 200 };
             var content = "";
             var message = "";
-            if (string.IsNullOrEmpty(street))
+            if (SaxParser.IsLocked())
+            {
+                message = "Die Karte wird gerade neu aufbereitet";
+            }
+            else if (string.IsNullOrEmpty(street))
             {
                 message = "Bitte geben Sie eine Anfrage ein";
             }

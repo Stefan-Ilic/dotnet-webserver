@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyWebServer.Helper
 {
     public class SaxParser
     {
-        //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Small.osm";
+        private static readonly object Castle = new object();
+
+        //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Austria.osm";
         private const string OsmFile = @"Mywebserver\Resources\Tiny.osm";
 
         /// <summary>
@@ -22,6 +25,22 @@ namespace MyWebServer.Helper
         /// </summary>
         public static bool IsUpdated { get; set; } = false;
 
+
+        /// <summary>
+        /// Checks whether another thread is currently calling the Update() Method, and if so, returns true, otherwise, returns false
+        /// </summary>
+        public static bool IsLocked()
+        {
+            if (!Monitor.TryEnter(Castle, 0)) return true;
+            try
+            {
+                return false;
+            }
+            finally
+            {
+                Monitor.Exit(Castle);
+            }
+        }
         /// <summary>
         /// Accepts a street-string and returns a List of strings with all cities containing that street according to the provided OSM file. If the Cities Dictionary has been filled, this method will search there directly
         /// </summary>
@@ -31,7 +50,7 @@ namespace MyWebServer.Helper
         {
             if (IsUpdated)
             {
-                return Cities[street]; //TODO check if street exists in dictionary
+                return Cities.ContainsKey(street) ? Cities[street] : new List<string>();
             }
             var cities = new List<string>();
             using (var fs = File.OpenRead(OsmFile))
@@ -106,17 +125,20 @@ namespace MyWebServer.Helper
         /// </summary>
         public static void Update()
         {
-            using (var fs = File.OpenRead(OsmFile))
-            using (var xml = new System.Xml.XmlTextReader(fs))
+            lock (Castle)
             {
-                while (xml.Read())
+                using (var fs = File.OpenRead(OsmFile))
+                using (var xml = new System.Xml.XmlTextReader(fs))
                 {
-                    if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
+                    while (xml.Read())
                     {
-                        Cities.Clear(); //TODO add thread safety here
-                        IsUpdated = false;
-                        FillCitiesDictionary(xml);
-                        IsUpdated = true;
+                        if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
+                        {
+                            Cities.Clear();
+                            IsUpdated = false;
+                            FillCitiesDictionary(xml);
+                            IsUpdated = true;
+                        }
                     }
                 }
             }
@@ -151,7 +173,7 @@ namespace MyWebServer.Helper
                 {
                     if (!Cities[streets[i]].Contains(cities[i]))
                     {
-                        Cities[streets[i]].Add(cities[i]); //TODO add thread safety here
+                        Cities[streets[i]].Add(cities[i]);
                     }
                 }
             }

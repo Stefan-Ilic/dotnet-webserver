@@ -27,8 +27,8 @@ namespace MyWebServer
             Console.WriteLine("The StaticFile plugin is currently Handling the Request");
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             Console.WriteLine(wdir);
-            Console.WriteLine(req.Url.Path.TrimStart("./deploy".ToCharArray()));
-            var file = Path.Combine(wdir, req.Url.Path.TrimStart('/'));
+            Console.WriteLine(req.Url.Path);
+            var file = Path.Combine(wdir.TrimEnd('/'), req.Url.Path.TrimStart("./deploy".ToCharArray()));
             Console.WriteLine(file);
             var resp = new Response();
             if (File.Exists(file))

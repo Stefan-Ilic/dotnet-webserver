@@ -28,7 +28,7 @@ namespace MyWebServer
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             Console.WriteLine(wdir);
             Console.WriteLine(req.Url.Path);
-            var file = Path.Combine(wdir, req.Url.Path.TrimStart("./deploy".ToCharArray()).TrimStart('/'));
+            var file = Path.Combine(wdir, req.Url.Path.TrimStart('/'));
             Console.WriteLine(file);
             var resp = new Response();
             if (File.Exists(file))

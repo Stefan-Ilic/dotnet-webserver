@@ -26,9 +26,7 @@ namespace MyWebServer
         {
             Console.WriteLine("The StaticFile plugin is currently Handling the Request");
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var file = "";
-            Console.WriteLine(wdir);
-            Console.WriteLine(req.Url.Path);
+            string file;
             if (req.Url.Path.Contains("./deploy"))
             {
                 file = "c:\\workspace\\BIF-WS17-SWE1-if16b072\\deploy" +
@@ -39,7 +37,6 @@ namespace MyWebServer
             {
                 file = Path.Combine(wdir, req.Url.Path.TrimStart('/'));
             }
-            Console.WriteLine(file);
             var resp = new Response();
             if (File.Exists(file))
             {

@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.6.0 (7994 thorn-01.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="48.1867000" minlon="16.3466900" maxlat="48.1876700" maxlon="16.3483000"/>
+ <node id="685276" visible="true" version="19" changeset="15173038" timestamp="2013-02-26T13:04:50Z" user="grimnirson" uid="579739" lat="48.1878668" lon="16.3453733"/>
+ <node id="46921576" visible="true" version="11" changeset="15173038" timestamp="2013-02-26T13:04:50Z" user="grimnirson" uid="579739" lat="48.1886279" lon="16.3479038"/>
+ <node id="46921584" visible="true" version="12" changeset="8251205" timestamp="2011-05-26T08:14:14Z" user="romge" uid="439883" lat="48.1866688" lon="16.3459935"/>
+ <node id="46921591" visible="true" version="10" changeset="3478641" timestamp="2009-12-29T09:33:32Z" user="hjanko" uid="55636" lat="48.1873320" lon="16.3468090"/>
+ <node id="46921596" visible="true" version="9" changeset="8251205" timestamp="2011-05-26T08:14:23Z" user="romge" uid="439883" lat="48.1878612" lon="16.3475056"/>
+ <node id="46921603" visible="true" version="8" changeset="8251205" timestamp="2011-05-26T08:14:11Z" user="romge" uid="439883" lat="48.1879497" lon="16.3476309"/>
+ <node id="46921607" visible="true" version="5" changeset="8300343" timestamp="2011-05-31T10:58:16Z" user="romge" uid="439883" lat="48.1881421" lon="16.3478634"/>
+ <node id="46921615" visible="true" version="5" changeset="8300343" timestamp="2011-05-31T10:58:14Z" user="romge" uid="439883" lat="48.1882391" lon="16.3478843"/>
+ <node id="46921622" visible="true" version="15" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1869917" lon="16.3481836"/>
+ <node id="46921639" visible="true" version="7" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1872356" lon="16.3489938"/>
+ <node id="46921644" visible="true" version="6" changeset="8401323" timestamp="2011-06-10T21:48:18Z" user="romge" uid="439883" lat="48.1875171" lon="16.3499669"/>
+ <node id="46921673" visible="true" version="14" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1867185" lon="16.3472553"/>
+ <node id="46921680" visible="true" version="10" changeset="8370840" timestamp="2011-06-07T14:49:33Z" user="romge" uid="439883" lat="48.1856407" lon="16.3480683"/>
+ <node id="46921738" visible="true" version="9" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1864481" lon="16.3463300"/>
+ <node id="46921743" visible="true" version="12" changeset="15173038" timestamp="2013-02-26T13:04:50Z" user="grimnirson" uid="579739" lat="48.1862294" lon="16.3454810"/>
+ <node id="46921763" visible="true" version="11" changeset="8370840" timestamp="2011-06-07T14:49:33Z" user="romge" uid="439883" lat="48.1849657" lon="16.3485831"/>
+ <node id="46921769" visible="true" version="5" changeset="8297645" timestamp="2011-05-31T00:08:22Z" user="romge" uid="439883" lat="48.1876250" lon="16.3458615"/>
+ <node id="46959572" visible="true" version="6" changeset="811865" timestamp="2009-03-15T09:00:57Z" user="mapper_07" uid="12295" lat="48.1877512" lon="16.3511170"/>
+ <node id="83689299" visible="true" version="17" changeset="8375267" timestamp="2011-06-07T23:39:57Z" user="romge" uid="439883" lat="48.1841165" lon="16.3492477">
+  <tag k="traffic_calming" v="table"/>
+ </node>
+ <node id="83689301" visible="true" version="13" changeset="8410479" timestamp="2011-06-11T21:50:39Z" user="romge" uid="439883" lat="48.1827991" lon="16.3502305"/>
+ <node id="286167248" visible="true" version="13" changeset="22931206" timestamp="2014-06-14T19:02:01Z" user="Man77" uid="2124439" lat="48.1877391" lon="16.3477161">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="11"/>
+  <tag k="addr:postcode" v="1053"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+  <tag k="amenity" v="post_office"/>
+  <tag k="opening_hours" v="Mo-Fr 08:00-18:00"/>
+  <tag k="operator" v="Österreichische Post AG"/>
+  <tag k="ref" v="1053"/>
+ </node>
+ <node id="419292676" visible="true" version="4" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1872824" lon="16.3469538"/>
+ <node id="419292677" visible="true" version="5" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1868121" lon="16.3473043"/>
+ <node id="419292678" visible="true" version="4" changeset="8384492" timestamp="2011-06-08T23:51:05Z" user="romge" uid="439883" lat="48.1870278" lon="16.3480333"/>
+ <node id="450289512" visible="true" version="4" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1876504" lon="16.3475581"/>
+ <node id="450639333" visible="true" version="3" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1873260" lon="16.3469595">
+  <tag k="amenity" v="recycling"/>
+  <tag k="recycling:clothes" v="yes"/>
+  <tag k="recycling:glass" v="yes"/>
+  <tag k="recycling:plastic_bottles" v="yes"/>
+  <tag k="recycling:scrap_metal" v="yes"/>
+  <tag k="recycling_type" v="container"/>
+ </node>
+ <node id="455894069" visible="true" version="3" changeset="8306579" timestamp="2011-05-31T23:16:29Z" user="romge" uid="439883" lat="48.1877687" lon="16.3478405">
+  <tag k="amenity" v="atm"/>
+ </node>
+ <node id="488538263" visible="true" version="4" changeset="45103167" timestamp="2017-01-12T12:56:57Z" user="g6289173" uid="4540891" lat="48.1873511" lon="16.3471924">
+  <tag k="access" v="yes"/>
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="1"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="capacity" v="196"/>
+  <tag k="capacity:women" v="yes"/>
+  <tag k="email" v="73-ght-garage@b-i-p.com"/>
+  <tag k="fee" v="yes"/>
+  <tag k="note" v="max height 2.10 meters"/>
+  <tag k="opening_hours" v="24/7"/>
+  <tag k="operator" v="Best in Parking"/>
+  <tag k="parking" v="underground"/>
+  <tag k="phone" v="0043 1 548 88 63"/>
+  <tag k="website" v="http://www.bestinparking.at/garage/wien/am-hundsturm-1"/>
+ </node>
+ <node id="600731084" visible="true" version="6" changeset="8375267" timestamp="2011-06-07T23:39:59Z" user="romge" uid="439883" lat="48.1859318" lon="16.3490114"/>
+ <node id="614650398" visible="true" version="7" changeset="18477376" timestamp="2013-10-21T21:24:58Z" user="klausewitz" uid="38178" lat="48.1871791" lon="16.3474455">
+  <tag k="amenity" v="fountain"/>
+  <tag k="material" v="stone"/>
+ </node>
+ <node id="835153685" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1869036" lon="16.3476276">
+  <tag k="amenity" v="recycling"/>
+  <tag k="recycling:clothes" v="yes"/>
+  <tag k="recycling:glass" v="yes"/>
+  <tag k="recycling:plastic_bottles" v="yes"/>
+  <tag k="recycling:scrap_metal" v="yes"/>
+  <tag k="recycling_type" v="container"/>
+ </node>
+ <node id="837158395" visible="true" version="3" changeset="12639437" timestamp="2012-08-06T21:49:44Z" user="grimnirson" uid="579739" lat="48.1872515" lon="16.3477941"/>
+ <node id="1300468873" visible="true" version="2" changeset="8297645" timestamp="2011-05-31T00:08:21Z" user="romge" uid="439883" lat="48.1867553" lon="16.3471181"/>
+ <node id="1300468912" visible="true" version="1" changeset="8251205" timestamp="2011-05-26T08:13:57Z" user="romge" uid="439883" lat="48.1869934" lon="16.3465326"/>
+ <node id="1300468947" visible="true" version="2" changeset="8297645" timestamp="2011-05-31T00:08:24Z" user="romge" uid="439883" lat="48.1871022" lon="16.3468614"/>
+ <node id="1300469021" visible="true" version="2" changeset="8297645" timestamp="2011-05-31T00:08:15Z" user="romge" uid="439883" lat="48.1866559" lon="16.3467727"/>
+ <node id="1306286037" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:05Z" user="romge" uid="439883" lat="48.1875174" lon="16.3466257"/>
+ <node id="1306286061" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:07Z" user="romge" uid="439883" lat="48.1868365" lon="16.3468581"/>
+ <node id="1306286097" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:09Z" user="romge" uid="439883" lat="48.1879046" lon="16.3471386"/>
+ <node id="1306286113" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:09Z" user="romge" uid="439883" lat="48.1875488" lon="16.3467338"/>
+ <node id="1306286172" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:11Z" user="romge" uid="439883" lat="48.1868986" lon="16.3467639"/>
+ <node id="1306286185" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:11Z" user="romge" uid="439883" lat="48.1867360" lon="16.3466383"/>
+ <node id="1306286201" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:11Z" user="romge" uid="439883" lat="48.1868830" lon="16.3466240"/>
+ <node id="1306286255" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:13Z" user="romge" uid="439883" lat="48.1877995" lon="16.3468143"/>
+ <node id="1306286340" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:15Z" user="romge" uid="439883" lat="48.1869076" lon="16.3466707"/>
+ <node id="1306286361" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:15Z" user="romge" uid="439883" lat="48.1867672" lon="16.3466999"/>
+ <node id="1306286405" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:16Z" user="romge" uid="439883" lat="48.1879598" lon="16.3470570"/>
+ <node id="1306286419" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:17Z" user="romge" uid="439883" lat="48.1875933" lon="16.3467522"/>
+ <node id="1306286435" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:17Z" user="romge" uid="439883" lat="48.1874674" lon="16.3465795"/>
+ <node id="1306286475" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:18Z" user="romge" uid="439883" lat="48.1869289" lon="16.3466562"/>
+ <node id="1306286483" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:18Z" user="romge" uid="439883" lat="48.1867183" lon="16.3465831"/>
+ <node id="1306286512" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:20Z" user="romge" uid="439883" lat="48.1877405" lon="16.3469270"/>
+ <node id="1306286517" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:20Z" user="romge" uid="439883" lat="48.1875910" lon="16.3467913"/>
+ <node id="1306286542" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:22Z" user="romge" uid="439883" lat="48.1867623" lon="16.3467842"/>
+ <node id="1306286548" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:22Z" user="romge" uid="439883" lat="48.1867482" lon="16.3466302"/>
+ <node id="1306286578" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:24Z" user="romge" uid="439883" lat="48.1878197" lon="16.3464160"/>
+ <node id="1306286580" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:24Z" user="romge" uid="439883" lat="48.1875726" lon="16.3467269"/>
+ <node id="1306286603" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:26Z" user="romge" uid="439883" lat="48.1869069" lon="16.3466084"/>
+ <node id="1306286611" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:26Z" user="romge" uid="439883" lat="48.1868065" lon="16.3468338"/>
+ <node id="1306286640" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:31Z" user="romge" uid="439883" lat="48.1875172" lon="16.3469091">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="1"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1306286647" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:28Z" user="romge" uid="439883" lat="48.1875948" lon="16.3467833"/>
+ <node id="1306286671" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:30Z" user="romge" uid="439883" lat="48.1867925" lon="16.3468872"/>
+ <node id="1306286687" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:40Z" user="romge" uid="439883" lat="48.1866530" lon="16.3467626">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="154"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Margaretenstraße"/>
+ </node>
+ <node id="1306286729" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:33Z" user="romge" uid="439883" lat="48.1869282" lon="16.3467890"/>
+ <node id="1306286736" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:34Z" user="romge" uid="439883" lat="48.1867871" lon="16.3467677"/>
+ <node id="1306286764" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:35Z" user="romge" uid="439883" lat="48.1877090" lon="16.3467177"/>
+ <node id="1306286772" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:36Z" user="romge" uid="439883" lat="48.1875779" lon="16.3469834"/>
+ <node id="1306286796" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:37Z" user="romge" uid="439883" lat="48.1869026" lon="16.3467772"/>
+ <node id="1306286817" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:39Z" user="romge" uid="439883" lat="48.1877289" lon="16.3471718">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="2-4"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1306286828" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:39Z" user="romge" uid="439883" lat="48.1879395" lon="16.3471843"/>
+ <node id="1306286834" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:40:03Z" user="romge" uid="439883" lat="48.1874382" lon="16.3466769">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="2"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Mauthausgasse"/>
+ </node>
+ <node id="1306286841" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:40Z" user="romge" uid="439883" lat="48.1874185" lon="16.3467430"/>
+ <node id="1306286849" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:41Z" user="romge" uid="439883" lat="48.1876733" lon="16.3467908"/>
+ <node id="1306286856" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:41Z" user="romge" uid="439883" lat="48.1869620" lon="16.3467661"/>
+ <node id="1306286864" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:32Z" user="romge" uid="439883" lat="48.1869200" lon="16.3469962">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="18"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1306286895" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:43Z" user="romge" uid="439883" lat="48.1879912" lon="16.3471007"/>
+ <node id="1306286902" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:44Z" user="romge" uid="439883" lat="48.1876416" lon="16.3468557"/>
+ <node id="1306286927" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:45Z" user="romge" uid="439883" lat="48.1869209" lon="16.3467648"/>
+ <node id="1306286935" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:45Z" user="romge" uid="439883" lat="48.1866203" lon="16.3466492"/>
+ <node id="1306286957" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:46Z" user="romge" uid="439883" lat="48.1878500" lon="16.3473230"/>
+ <node id="1306286963" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:47Z" user="romge" uid="439883" lat="48.1875335" lon="16.3467177"/>
+ <node id="1306286970" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:47Z" user="romge" uid="439883" lat="48.1874238" lon="16.3467948"/>
+ <node id="1306286978" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:48Z" user="romge" uid="439883" lat="48.1876322" lon="16.3467445"/>
+ <node id="1306286994" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:49Z" user="romge" uid="439883" lat="48.1868256" lon="16.3468212"/>
+ <node id="1306287002" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:49Z" user="romge" uid="439883" lat="48.1868015" lon="16.3466774"/>
+ <node id="1306287021" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:50Z" user="romge" uid="439883" lat="48.1879882" lon="16.3471056"/>
+ <node id="1306287028" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:51Z" user="romge" uid="439883" lat="48.1875526" lon="16.3467258"/>
+ <node id="1306287053" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:52Z" user="romge" uid="439883" lat="48.1869294" lon="16.3467430"/>
+ <node id="1306287059" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:44Z" user="romge" uid="439883" lat="48.1867155" lon="16.3469800">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="152"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Margaretenstraße"/>
+ </node>
+ <node id="1306287090" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:55Z" user="romge" uid="439883" lat="48.1875595" lon="16.3466625"/>
+ <node id="1306610070" visible="true" version="1" changeset="8300343" timestamp="2011-05-31T10:57:55Z" user="romge" uid="439883" lat="48.1872845" lon="16.3469154"/>
+ <node id="1306610137" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1867871" lon="16.3472828"/>
+ <node id="1307316111" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:52Z" user="romge" uid="439883" lat="48.1874162" lon="16.3482018"/>
+ <node id="1307316126" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:52Z" user="romge" uid="439883" lat="48.1873909" lon="16.3481443"/>
+ <node id="1307316139" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:52Z" user="romge" uid="439883" lat="48.1875148" lon="16.3481334"/>
+ <node id="1307316141" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:52Z" user="romge" uid="439883" lat="48.1875502" lon="16.3485244"/>
+ <node id="1307316163" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1872761" lon="16.3483220"/>
+ <node id="1307316171" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1874032" lon="16.3481374"/>
+ <node id="1307316177" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1871609" lon="16.3482580"/>
+ <node id="1307316179" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1876259" lon="16.3480423"/>
+ <node id="1307316197" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1877451" lon="16.3477215"/>
+ <node id="1307316201" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:53Z" user="romge" uid="439883" lat="48.1877131" lon="16.3481796"/>
+ <node id="1307316209" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:54Z" user="romge" uid="439883" lat="48.1875430" lon="16.3481599"/>
+ <node id="1307316230" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:54Z" user="romge" uid="439883" lat="48.1875266" lon="16.3484560"/>
+ <node id="1307316232" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:54Z" user="romge" uid="439883" lat="48.1873752" lon="16.3480967"/>
+ <node id="1307316247" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:55Z" user="romge" uid="439883" lat="48.1874149" lon="16.3484349"/>
+ <node id="1307316265" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:46Z" user="romge" uid="439883" lat="48.1871353" lon="16.3484421">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="150"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Margaretenstraße"/>
+ </node>
+ <node id="1307316266" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:56Z" user="romge" uid="439883" lat="48.1876299" lon="16.3479929"/>
+ <node id="1307316273" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:56Z" user="romge" uid="439883" lat="48.1874126" lon="16.3481909"/>
+ <node id="1307316274" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:55Z" user="romge" uid="439883" lat="48.1878249" lon="16.3480982">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="67"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Bräuhausgasse"/>
+ </node>
+ <node id="1307316277" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:57Z" user="romge" uid="439883" lat="48.1875255" lon="16.3482651"/>
+ <node id="1307316280" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:57Z" user="romge" uid="439883" lat="48.1875786" lon="16.3486053"/>
+ <node id="1307316283" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:57Z" user="romge" uid="439883" lat="48.1871697" lon="16.3482515"/>
+ <node id="1307316285" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:57Z" user="romge" uid="439883" lat="48.1875329" lon="16.3484009"/>
+ <node id="1307316290" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:40:00Z" user="romge" uid="439883" lat="48.1872755" lon="16.3480688">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="13"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1307316294" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:58Z" user="romge" uid="439883" lat="48.1874223" lon="16.3481660"/>
+ <node id="1307316299" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:58Z" user="romge" uid="439883" lat="48.1878168" lon="16.3480611"/>
+ <node id="1307316304" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:37Z" user="romge" uid="439883" lat="48.1871471" lon="16.3481680">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="14"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1307316313" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:59Z" user="romge" uid="439883" lat="48.1874181" lon="16.3481481"/>
+ <node id="1307316316" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:15:59Z" user="romge" uid="439883" lat="48.1875266" lon="16.3484075"/>
+ <node id="1307316320" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:00Z" user="romge" uid="439883" lat="48.1873140" lon="16.3482422"/>
+ <node id="1307316330" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:00Z" user="romge" uid="439883" lat="48.1871846" lon="16.3486123"/>
+ <node id="1307316332" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:38Z" user="romge" uid="439883" lat="48.1875990" lon="16.3478191">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="11"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1307316333" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:00Z" user="romge" uid="439883" lat="48.1877183" lon="16.3477215"/>
+ <node id="1307316336" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:01Z" user="romge" uid="439883" lat="48.1878844" lon="16.3483716"/>
+ <node id="1307316338" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:01Z" user="romge" uid="439883" lat="48.1874967" lon="16.3481817"/>
+ <node id="1307316341" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:01Z" user="romge" uid="439883" lat="48.1875542" lon="16.3484614"/>
+ <node id="1307316347" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:01Z" user="romge" uid="439883" lat="48.1873650" lon="16.3482276"/>
+ <node id="1307316353" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:02Z" user="romge" uid="439883" lat="48.1871846" lon="16.3482964"/>
+ <node id="1307316354" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:35Z" user="romge" uid="439883" lat="48.1877877" lon="16.3479278">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="69"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Bräuhausgasse"/>
+ </node>
+ <node id="1307316357" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:02Z" user="romge" uid="439883" lat="48.1870725" lon="16.3482256"/>
+ <node id="1307316358" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:02Z" user="romge" uid="439883" lat="48.1873052" lon="16.3485195"/>
+ <node id="1307316362" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:02Z" user="romge" uid="439883" lat="48.1876818" lon="16.3482564"/>
+ <node id="1307316367" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:03Z" user="romge" uid="439883" lat="48.1876238" lon="16.3481918"/>
+ <node id="1307316368" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1874743" lon="16.3469952"/>
+ <node id="1307316371" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:03Z" user="romge" uid="439883" lat="48.1874729" lon="16.3483044"/>
+ <node id="1307316377" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:03Z" user="romge" uid="439883" lat="48.1872920" lon="16.3483691"/>
+ <node id="1307316381" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:03Z" user="romge" uid="439883" lat="48.1873580" lon="16.3483710"/>
+ <node id="1307316386" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:04Z" user="romge" uid="439883" lat="48.1873658" lon="16.3479991"/>
+ <node id="1307316390" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:04Z" user="romge" uid="439883" lat="48.1875231" lon="16.3478777"/>
+ <node id="1307316398" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:04Z" user="romge" uid="439883" lat="48.1877176" lon="16.3482577"/>
+ <node id="1307316401" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1873603" lon="16.3472756"/>
+ <node id="1307316409" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:05Z" user="romge" uid="439883" lat="48.1872552" lon="16.3482601"/>
+ <node id="1307316410" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:05Z" user="romge" uid="439883" lat="48.1877317" lon="16.3477132"/>
+ <node id="1307316413" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:05Z" user="romge" uid="439883" lat="48.1873576" lon="16.3482079"/>
+ <node id="1307316418" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1871758" lon="16.3483030"/>
+ <node id="1307316419" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1876819" lon="16.3480285"/>
+ <node id="1307316421" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1875427" lon="16.3484661"/>
+ <node id="1307316426" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1874324" lon="16.3481889"/>
+ <node id="1307316427" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1876689" lon="16.3482000"/>
+ <node id="1307316430" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1875663" lon="16.3482347"/>
+ <node id="1307316436" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:06Z" user="romge" uid="439883" lat="48.1875056" lon="16.3483975"/>
+ <node id="1307316441" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:07Z" user="romge" uid="439883" lat="48.1874115" lon="16.3480678"/>
+ <node id="1307316452" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:07Z" user="romge" uid="439883" lat="48.1872945" lon="16.3483082"/>
+ <node id="1307316457" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:08Z" user="romge" uid="439883" lat="48.1875706" lon="16.3485079"/>
+ <node id="1307316460" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:08Z" user="romge" uid="439883" lat="48.1873946" lon="16.3480813"/>
+ <node id="1307316464" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:08Z" user="romge" uid="439883" lat="48.1876625" lon="16.3480638"/>
+ <node id="1307316468" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:08Z" user="romge" uid="439883" lat="48.1877144" lon="16.3477300"/>
+ <node id="1307316472" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:08Z" user="romge" uid="439883" lat="48.1877136" lon="16.3482391"/>
+ <node id="1307316476" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1874195" lon="16.3471755"/>
+ <node id="1307316485" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:09Z" user="romge" uid="439883" lat="48.1872082" lon="16.3481208"/>
+ <node id="1307316486" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:09Z" user="romge" uid="439883" lat="48.1877507" lon="16.3477416"/>
+ <node id="1307316491" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:09Z" user="romge" uid="439883" lat="48.1874221" lon="16.3483423"/>
+ <node id="1307316497" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:10Z" user="romge" uid="439883" lat="48.1876999" lon="16.3481174"/>
+ <node id="1307316499" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:10Z" user="romge" uid="439883" lat="48.1875199" lon="16.3484318"/>
+ <node id="1307316500" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:10Z" user="romge" uid="439883" lat="48.1875229" lon="16.3484466"/>
+ <node id="1307316511" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:11Z" user="romge" uid="439883" lat="48.1874353" lon="16.3481341"/>
+ <node id="1307316520" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:11Z" user="romge" uid="439883" lat="48.1872737" lon="16.3482470"/>
+ <node id="1307316524" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:11Z" user="romge" uid="439883" lat="48.1877213" lon="16.3484962"/>
+ <node id="1307316530" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:12Z" user="romge" uid="439883" lat="48.1872461" lon="16.3484033"/>
+ <node id="1307316531" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:12Z" user="romge" uid="439883" lat="48.1876707" lon="16.3480282"/>
+ <node id="1307316535" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:12Z" user="romge" uid="439883" lat="48.1874167" lon="16.3481862"/>
+ <node id="1307316536" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:12Z" user="romge" uid="439883" lat="48.1877369" lon="16.3482805"/>
+ <node id="1307316539" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:12Z" user="romge" uid="439883" lat="48.1875296" lon="16.3481229"/>
+ <node id="1307316540" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1873710" lon="16.3470996"/>
+ <node id="1307316547" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:13Z" user="romge" uid="439883" lat="48.1873795" lon="16.3482171"/>
+ <node id="1307316551" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:13Z" user="romge" uid="439883" lat="48.1876007" lon="16.3481197"/>
+ <node id="1307316552" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:13Z" user="romge" uid="439883" lat="48.1875730" lon="16.3484026"/>
+ <node id="1307316565" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:49Z" user="romge" uid="439883" lat="48.1877815" lon="16.3484503">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="71"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Embelgasse"/>
+ </node>
+ <node id="1307316568" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:15Z" user="romge" uid="439883" lat="48.1875241" lon="16.3481603"/>
+ <node id="1307316574" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:15Z" user="romge" uid="439883" lat="48.1873350" lon="16.3484965"/>
+ <node id="1307316576" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:15Z" user="romge" uid="439883" lat="48.1877494" lon="16.3477519"/>
+ <node id="1307316580" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:46Z" user="romge" uid="439883" lat="48.1876197" lon="16.3485739">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="69"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Embelgasse"/>
+ </node>
+ <node id="1307316582" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:40Z" user="romge" uid="439883" lat="48.1874603" lon="16.3479261">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="12"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1307316583" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1872102" lon="16.3482952"/>
+ <node id="1307316584" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1876346" lon="16.3480059"/>
+ <node id="1307316586" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1873568" lon="16.3484797"/>
+ <node id="1307316588" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1877303" lon="16.3482492"/>
+ <node id="1307316589" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1875259" lon="16.3483811"/>
+ <node id="1307316592" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:16Z" user="romge" uid="439883" lat="48.1875169" lon="16.3480818"/>
+ <node id="1307316593" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1873077" lon="16.3472026"/>
+ <node id="1307316601" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:17Z" user="romge" uid="439883" lat="48.1873857" lon="16.3483510"/>
+ <node id="1307316605" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:17Z" user="romge" uid="439883" lat="48.1876686" lon="16.3483317"/>
+ <node id="1307316612" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:17Z" user="romge" uid="439883" lat="48.1875748" lon="16.3480389"/>
+ <node id="1313589889" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:55Z" user="romge" uid="439883" lat="48.1866565" lon="16.3477806"/>
+ <node id="1313589893" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:55Z" user="romge" uid="439883" lat="48.1867075" lon="16.3480750"/>
+ <node id="1313589895" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:55Z" user="romge" uid="439883" lat="48.1867072" lon="16.3479519"/>
+ <node id="1313589911" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:52Z" user="romge" uid="439883" lat="48.1865246" lon="16.3475278">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="52"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Diehlgasse"/>
+ </node>
+ <node id="1313589927" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:56Z" user="romge" uid="439883" lat="48.1866764" lon="16.3479724"/>
+ <node id="1313589933" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:56Z" user="romge" uid="439883" lat="48.1866890" lon="16.3480899"/>
+ <node id="1313589959" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1866291" lon="16.3477958"/>
+ <node id="1313589963" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1867012" lon="16.3479763"/>
+ <node id="1313589970" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1867020" lon="16.3480579"/>
+ <node id="1313589972" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1867071" lon="16.3479631"/>
+ <node id="1313589985" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1864517" lon="16.3475834"/>
+ <node id="1313589995" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:57Z" user="romge" uid="439883" lat="48.1867529" lon="16.3476378"/>
+ <node id="1313590013" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:59Z" user="romge" uid="439883" lat="48.1866119" lon="16.3477396"/>
+ <node id="1313590016" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:59Z" user="romge" uid="439883" lat="48.1867014" lon="16.3480366"/>
+ <node id="1313590020" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:50:59Z" user="romge" uid="439883" lat="48.1865034" lon="16.3477360"/>
+ <node id="1313590030" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:58Z" user="romge" uid="439883" lat="48.1868573" lon="16.3479941">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="15"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1313590032" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:00Z" user="romge" uid="439883" lat="48.1867247" lon="16.3480027"/>
+ <node id="1313590038" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:00Z" user="romge" uid="439883" lat="48.1866969" lon="16.3479115"/>
+ <node id="1313590047" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:00Z" user="romge" uid="439883" lat="48.1866972" lon="16.3478771"/>
+ <node id="1313590049" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:01Z" user="romge" uid="439883" lat="48.1867103" lon="16.3480141"/>
+ <node id="1313590059" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:01Z" user="romge" uid="439883" lat="48.1866973" lon="16.3479869"/>
+ <node id="1313590075" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:54Z" user="romge" uid="439883" lat="48.1868039" lon="16.3478118">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="16"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1313590081" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:01Z" user="romge" uid="439883" lat="48.1868940" lon="16.3481192"/>
+ <node id="1313590087" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:01Z" user="romge" uid="439883" lat="48.1867158" lon="16.3479694"/>
+ <node id="1313590143" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:03Z" user="romge" uid="439883" lat="48.1866863" lon="16.3478385"/>
+ <node id="1313590146" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:39Z" user="romge" uid="439883" lat="48.1866932" lon="16.3482960">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="39"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Einsiedlergasse"/>
+ </node>
+ <node id="1313590176" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:03Z" user="romge" uid="439883" lat="48.1866128" lon="16.3476519"/>
+ <node id="1313590181" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:03Z" user="romge" uid="439883" lat="48.1866893" lon="16.3479959"/>
+ <node id="1313590209" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:04Z" user="romge" uid="439883" lat="48.1868876" lon="16.3481472"/>
+ <node id="1313590215" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:04Z" user="romge" uid="439883" lat="48.1866806" lon="16.3479594"/>
+ <node id="1313590218" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:04Z" user="romge" uid="439883" lat="48.1867231" lon="16.3479642"/>
+ <node id="1313590251" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:04Z" user="romge" uid="439883" lat="48.1866795" lon="16.3478436"/>
+ <node id="1313590259" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:04Z" user="romge" uid="439883" lat="48.1866410" lon="16.3481421"/>
+ <node id="1313590275" visible="true" version="2" changeset="8375267" timestamp="2011-06-07T23:39:54Z" user="romge" uid="439883" lat="48.1867244" lon="16.3475405">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="17"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+ </node>
+ <node id="1313590301" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:05Z" user="romge" uid="439883" lat="48.1866335" lon="16.3477240"/>
+ <node id="1313590311" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:06Z" user="romge" uid="439883" lat="48.1866745" lon="16.3479965"/>
+ <node id="1313590331" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:06Z" user="romge" uid="439883" lat="48.1866525" lon="16.3477987"/>
+ <node id="1313590333" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:06Z" user="romge" uid="439883" lat="48.1866719" lon="16.3479270"/>
+ <node id="1313590351" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:06Z" user="romge" uid="439883" lat="48.1866777" lon="16.3474109"/>
+ <node id="1313590357" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1866680" lon="16.3479803"/>
+ <node id="1313590362" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1866691" lon="16.3478077"/>
+ <node id="1313590375" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1866927" lon="16.3481012"/>
+ <node id="1313590379" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1866872" lon="16.3474136"/>
+ <node id="1313590384" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1864986" lon="16.3477219"/>
+ <node id="1313590387" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:07Z" user="romge" uid="439883" lat="48.1866684" lon="16.3479897"/>
+ <node id="1318617104" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1871063" lon="16.3470879"/>
+ <node id="1318617116" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1870422" lon="16.3471338"/>
+ <node id="1318617118" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1873616" lon="16.3479007"/>
+ <node id="1318617123" visible="true" version="1" changeset="8395558" timestamp="2011-06-10T09:31:20Z" user="romge" uid="439883" lat="48.1872734" lon="16.3473450">
+  <tag k="amenity" v="drinking_water"/>
+ </node>
+ <node id="1318617124" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1873290" lon="16.3478031"/>
+ <node id="1318617127" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:42Z" user="grimnirson" uid="579739" lat="48.1870809" lon="16.3472535"/>
+ <node id="1318617131" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:43Z" user="grimnirson" uid="579739" lat="48.1871441" lon="16.3472070"/>
+ <node id="1339090946" visible="true" version="1" changeset="8547658" timestamp="2011-06-25T23:27:58Z" user="romge" uid="439883" lat="48.1879274" lon="16.3519169">
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="1365015155" visible="true" version="4" changeset="35872697" timestamp="2015-12-10T20:02:38Z" user="nounours77" uid="835140" lat="48.1868324" lon="16.3474058">
+  <tag k="amenity" v="shelter"/>
+  <tag k="shelter_type" v="public_transport"/>
+ </node>
+ <node id="1367391279" visible="true" version="7" changeset="38878810" timestamp="2016-04-26T08:03:17Z" user="emergency99" uid="1832939" lat="48.1867800" lon="16.3474784">
+  <tag k="bus" v="yes"/>
+  <tag k="highway" v="bus_stop"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="network" v="VOR"/>
+  <tag k="public_transport" v="stop_position"/>
+ </node>
+ <node id="1369383709" visible="true" version="5" changeset="38878810" timestamp="2016-04-26T08:08:28Z" user="emergency99" uid="1832939" lat="48.1878512" lon="16.3515654">
+  <tag k="bus" v="yes"/>
+  <tag k="highway" v="bus_stop"/>
+  <tag k="name" v="Kohlgasse"/>
+  <tag k="network" v="VOR"/>
+  <tag k="public_transport" v="stop_position"/>
+ </node>
+ <node id="1369383752" visible="true" version="1" changeset="8792262" timestamp="2011-07-21T20:13:24Z" user="romge" uid="439883" lat="48.1868142" lon="16.3473419"/>
+ <node id="1369383753" visible="true" version="1" changeset="8792262" timestamp="2011-07-21T20:13:24Z" user="romge" uid="439883" lat="48.1868642" lon="16.3475171"/>
+ <node id="1779797858" visible="true" version="1" changeset="11830179" timestamp="2012-06-07T21:31:40Z" user="grimnirson" uid="579739" lat="48.1870948" lon="16.3467179">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="71"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Bräuhausgasse"/>
+ </node>
+ <node id="1813162230" visible="true" version="1" changeset="12115001" timestamp="2012-07-04T21:07:40Z" user="grimnirson" uid="579739" lat="48.1874858" lon="16.3498629"/>
+ <node id="1832346961" visible="true" version="1" changeset="12387848" timestamp="2012-07-20T19:01:19Z" user="fkv" uid="302363" lat="48.1880730" lon="16.3478057"/>
+ <node id="1855008465" visible="true" version="2" changeset="15173038" timestamp="2013-02-26T13:04:49Z" user="grimnirson" uid="579739" lat="48.1867376" lon="16.3473187">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="crossing_ref" v="zebra"/>
+  <tag k="highway" v="crossing"/>
+  <tag k="traffic_calming" v="table"/>
+ </node>
+ <node id="1855008470" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1868316" lon="16.3472508">
+  <tag k="barrier" v="bollard"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="foot" v="yes"/>
+ </node>
+ <node id="1855008474" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1869277" lon="16.3474808"/>
+ <node id="1855008476" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1869934" lon="16.3477041"/>
+ <node id="1855008478" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1870332" lon="16.3474131"/>
+ <node id="1855008479" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1870422" lon="16.3472088"/>
+ <node id="1855008482" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1870434" lon="16.3472717"/>
+ <node id="1855008484" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:35Z" user="grimnirson" uid="579739" lat="48.1870594" lon="16.3471872"/>
+ <node id="1855008486" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1870648" lon="16.3472702"/>
+ <node id="1855008487" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1870996" lon="16.3478841"/>
+ <node id="1855008492" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871015" lon="16.3474350"/>
+ <node id="1855008494" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871022" lon="16.3476263"/>
+ <node id="1855008496" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871260" lon="16.3477771"/>
+ <node id="1855008499" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871299" lon="16.3475203"/>
+ <node id="1855008501" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871580" lon="16.3479165"/>
+ <node id="1855008503" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1871844" lon="16.3478095"/>
+ <node id="1855008505" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872257" lon="16.3473441"/>
+ <node id="1855008507" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872363" lon="16.3469511">
+  <tag k="barrier" v="bollard"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="foot" v="yes"/>
+ </node>
+ <node id="1855008511" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872435" lon="16.3474022"/>
+ <node id="1855008512" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872485" lon="16.3467064">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="crossing_ref" v="zebra"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="1855008516" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872506" lon="16.3472264"/>
+ <node id="1855008518" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872695" lon="16.3478482"/>
+ <node id="1855008520" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872738" lon="16.3476414"/>
+ <node id="1855008521" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872907" lon="16.3472488"/>
+ <node id="1855008522" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872935" lon="16.3476727"/>
+ <node id="1855008523" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:36Z" user="grimnirson" uid="579739" lat="48.1872995" lon="16.3477580"/>
+ <node id="1855008527" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873142" lon="16.3472733"/>
+ <node id="1855008529" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873175" lon="16.3478121"/>
+ <node id="1855008531" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873309" lon="16.3472999"/>
+ <node id="1855008533" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873355" lon="16.3477981"/>
+ <node id="1855008535" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873422" lon="16.3473335"/>
+ <node id="1855008537" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873713" lon="16.3474142"/>
+ <node id="1855008539" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873775" lon="16.3473615"/>
+ <node id="1855008541" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873806" lon="16.3473196"/>
+ <node id="1855008543" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1873818" lon="16.3468746">
+  <tag k="crossing" v="uncontrolled"/>
+  <tag k="crossing_ref" v="zebra"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="1855008546" visible="true" version="2" changeset="42350134" timestamp="2016-09-22T14:51:32Z" user="g8934289" uid="4544939" lat="48.1873819" lon="16.3477239">
+  <tag k="amenity" v="vending_machine"/>
+  <tag k="fee" v="no"/>
+  <tag k="vending" v="excrement_bags"/>
+ </node>
+ <node id="1855008550" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874098" lon="16.3474242"/>
+ <node id="1855008552" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874159" lon="16.3473715"/>
+ <node id="1855008554" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874183" lon="16.3473383"/>
+ <node id="1855008556" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874325" lon="16.3473628"/>
+ <node id="1855008558" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874350" lon="16.3474609"/>
+ <node id="1855008560" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874396" lon="16.3473916"/>
+ <node id="1855008562" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:37Z" user="grimnirson" uid="579739" lat="48.1874400" lon="16.3474278"/>
+ <node id="1855008563" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739" lat="48.1874497" lon="16.3475634"/>
+ <node id="1855008565" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739" lat="48.1875161" lon="16.3475860"/>
+ <node id="1855008567" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739" lat="48.1875341" lon="16.3476468"/>
+ <node id="1855008570" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739" lat="48.1876148" lon="16.3474666">
+  <tag k="amenity" v="telephone"/>
+ </node>
+ <node id="1855008572" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739" lat="48.1876695" lon="16.3475040">
+  <tag k="amenity" v="drinking_water"/>
+ </node>
+ <node id="2044080181" visible="true" version="2" changeset="27685905" timestamp="2014-12-25T09:54:54Z" user="ecdos" uid="762684" lat="48.1867765" lon="16.3482915">
+  <tag k="circumference" v="0.38"/>
+  <tag k="denotation" v="urban"/>
+  <tag k="diameter_crown" v="0.6"/>
+  <tag k="fixme" v="Baum oder Strauch"/>
+  <tag k="height" v="2"/>
+  <tag k="leaf_type" v="broadleaved"/>
+  <tag k="natural" v="tree"/>
+  <tag k="source" v="OGD Vienna"/>
+  <tag k="species" v="Carpinus betulus"/>
+  <tag k="species:de" v="Pyramidenhainbuche"/>
+  <tag k="start_date" v="2008"/>
+  <tag k="taxon" v="Carpinus betulus Columnaris"/>
+  <tag k="taxon:cultivar" v="Columnaris"/>
+  <tag k="tree:ref" v="1020"/>
+ </node>
+ <node id="2044081568" visible="true" version="4" changeset="45873572" timestamp="2017-02-07T05:33:41Z" user="Stereo_repair" uid="5234603" lat="48.1872810" lon="16.3468602">
+  <tag k="circumference" v="0.93"/>
+  <tag k="denotation" v="urban"/>
+  <tag k="diameter_crown" v="5"/>
+  <tag k="height" v="8"/>
+  <tag k="leaf_type" v="broadleaved"/>
+  <tag k="natural" v="tree"/>
+  <tag k="source" v="OGD Vienna"/>
+  <tag k="species" v="Sophora japonica"/>
+  <tag k="species:de" v="Schnurbaum"/>
+  <tag k="start_date" v="1980"/>
+  <tag k="taxon" v="Sophora japonica"/>
+  <tag k="tree:ref" v="1010"/>
+ </node>
+ <node id="2175055903" visible="true" version="1" changeset="15173038" timestamp="2013-02-26T13:04:40Z" user="grimnirson" uid="579739" lat="48.1862344" lon="16.3455958"/>
+ <node id="2175055947" visible="true" version="1" changeset="15173038" timestamp="2013-02-26T13:04:41Z" user="grimnirson" uid="579739" lat="48.1877569" lon="16.3477864">
+  <tag k="amenity" v="post_box"/>
+ </node>
+ <node id="2175055951" visible="true" version="1" changeset="15173038" timestamp="2013-02-26T13:04:41Z" user="grimnirson" uid="579739" lat="48.1877632" lon="16.3475831">
+  <tag k="traffic_calming" v="table"/>
+ </node>
+ <node id="2175055970" visible="true" version="1" changeset="15173038" timestamp="2013-02-26T13:04:41Z" user="grimnirson" uid="579739" lat="48.1885539" lon="16.3479001">
+  <tag k="highway" v="give_way"/>
+ </node>
+ <node id="2504421502" visible="true" version="1" changeset="18477333" timestamp="2013-10-21T21:22:23Z" user="klausewitz" uid="38178" lat="48.1867525" lon="16.3472242">
+  <tag k="amenity" v="bicycle_parking"/>
+ </node>
+ <node id="3527744085" visible="true" version="3" changeset="39892966" timestamp="2016-06-08T20:09:01Z" user="zimba" uid="495567" lat="48.1874419" lon="16.3467644">
+  <tag k="addr:city" v="Wien"/>
+  <tag k="addr:country" v="AT"/>
+  <tag k="addr:housenumber" v="1"/>
+  <tag k="addr:postcode" v="1050"/>
+  <tag k="addr:street" v="Am Hundsturm"/>
+  <tag k="contact:email" v="info@heavypedals.at"/>
+  <tag k="contact:fax" v="+43 1 353035355"/>
+  <tag k="contact:phone" v="+43 1 3530353"/>
+  <tag k="contact:website" v="http://heavypedals.at"/>
+  <tag k="name" v="Heavy Pedals"/>
+  <tag k="service:bicycle:pump" v="yes"/>
+  <tag k="service:bicycle:rental" v="yes"/>
+  <tag k="service:bicycle:repair" v="yes"/>
+  <tag k="service:bicycle:retail" v="yes"/>
+  <tag k="shop" v="bicycle"/>
+ </node>
+ <node id="3703665156" visible="true" version="1" changeset="33427109" timestamp="2015-08-18T21:29:32Z" user="mmarinschek" uid="566369" lat="48.1879534" lon="16.3520351"/>
+ <node id="3909718748" visible="true" version="3" changeset="39892966" timestamp="2016-06-08T20:09:01Z" user="zimba" uid="495567" lat="48.1873793" lon="16.3467310">
+  <tag k="amenity" v="bicycle_repair_station"/>
+  <tag k="operator" v="Heavy Pedals"/>
+  <tag k="service:bicycle:chain_tool" v="no"/>
+  <tag k="service:bicycle:pump" v="yes"/>
+ </node>
+ <node id="3922338276" visible="true" version="3" changeset="45165322" timestamp="2017-01-14T17:14:44Z" user="gsa" uid="427183" lat="48.1869295" lon="16.3470949">
+  <tag k="name" v="Hundsturm"/>
+  <tag k="place" v="suburb"/>
+  <tag k="wikidata" v="Q456192"/>
+  <tag k="wikipedia" v="de:Hundsturm"/>
+ </node>
+ <node id="4042856628" visible="true" version="2" changeset="39892966" timestamp="2016-06-08T20:09:01Z" user="zimba" uid="495567" lat="48.1874451" lon="16.3468209">
+  <tag k="amenity" v="vending_machine"/>
+  <tag k="brand" v="Schwalbe"/>
+  <tag k="designation" v="bicycle_tube"/>
+  <tag k="name" v="bicycle_tube"/>
+  <tag k="operator" v="Heavy Pedals"/>
+  <tag k="payment:coins" v="yes"/>
+  <tag k="payment:notes" v="no"/>
+ </node>
+ <way id="5841256" visible="true" version="12" changeset="15173038" timestamp="2013-02-26T13:04:46Z" user="grimnirson" uid="579739">
+  <nd ref="685276"/>
+  <nd ref="46921769"/>
+  <nd ref="46921591"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Mauthausgasse"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+ </way>
+ <way id="11976380" visible="true" version="17" changeset="48881517" timestamp="2017-05-22T10:58:07Z" user="paulakreuzer" uid="2540342">
+  <nd ref="46921673"/>
+  <nd ref="46921680"/>
+  <nd ref="46921763"/>
+  <nd ref="83689299"/>
+  <nd ref="83689301"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Diehlgasse"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+  <tag k="source:maxspeed" v="AT:zone:30"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="29711818" visible="true" version="9" changeset="15173038" timestamp="2013-02-26T13:04:43Z" user="grimnirson" uid="579739">
+  <nd ref="46921622"/>
+  <nd ref="1318617118"/>
+  <nd ref="2175055951"/>
+  <nd ref="46921596"/>
+  <tag k="cycleway" v="opposite_lane"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+ </way>
+ <way id="29711929" visible="true" version="5" changeset="14450178" timestamp="2012-12-29T12:59:55Z" user="Marko Knöbl" uid="23292">
+  <nd ref="1855008465"/>
+  <nd ref="1306610137"/>
+  <nd ref="1855008470"/>
+  <nd ref="1855008507"/>
+  <nd ref="1306610070"/>
+  <nd ref="46921591"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="name" v="Am Hundsturm"/>
+ </way>
+ <way id="29711945" visible="true" version="8" changeset="31728877" timestamp="2015-06-04T19:29:08Z" user="emergency99" uid="1832939">
+  <nd ref="46921622"/>
+  <nd ref="1367391279"/>
+  <nd ref="1855008465"/>
+  <nd ref="46921673"/>
+  <tag k="highway" v="tertiary"/>
+  <tag k="is_in" v="Austria, Europe,Vienna,Wien"/>
+  <tag k="maxspeed" v="50"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+ </way>
+ <way id="29711947" visible="true" version="4" changeset="15173038" timestamp="2013-02-26T13:04:46Z" user="grimnirson" uid="579739">
+  <nd ref="46921673"/>
+  <nd ref="46921738"/>
+  <nd ref="2175055903"/>
+  <nd ref="46921743"/>
+  <tag k="highway" v="tertiary"/>
+  <tag k="is_in" v="Austria, Europe,Vienna,Wien"/>
+  <tag k="maxspeed" v="50"/>
+  <tag k="name" v="Margaretenstraße"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+ </way>
+ <way id="30333438" visible="true" version="4" changeset="15173038" timestamp="2013-02-26T13:04:44Z" user="grimnirson" uid="579739">
+  <nd ref="46921584"/>
+  <nd ref="1855008512"/>
+  <nd ref="46921591"/>
+  <tag k="cycleway" v="opposite_lane"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Bräuhausgasse"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+ </way>
+ <way id="35875923" visible="true" version="8" changeset="12639592" timestamp="2012-08-06T22:04:56Z" user="grimnirson" uid="579739">
+  <nd ref="419292677"/>
+  <nd ref="419292678"/>
+  <nd ref="1855008518"/>
+  <nd ref="1855008529"/>
+  <nd ref="1318617124"/>
+  <nd ref="1855008533"/>
+  <nd ref="1855008522"/>
+  <nd ref="1855008563"/>
+  <nd ref="1855008565"/>
+  <nd ref="1855008567"/>
+  <nd ref="450289512"/>
+  <nd ref="1307316476"/>
+  <nd ref="1307316401"/>
+  <nd ref="1307316593"/>
+  <nd ref="1307316540"/>
+  <nd ref="419292676"/>
+  <nd ref="1318617104"/>
+  <nd ref="1318617116"/>
+  <nd ref="419292677"/>
+  <tag k="leisure" v="park"/>
+  <tag k="name" v="Park am Hundsturm"/>
+ </way>
+ <way id="38219667" visible="true" version="6" changeset="12639437" timestamp="2012-08-06T21:49:41Z" user="grimnirson" uid="579739">
+  <nd ref="46921622"/>
+  <nd ref="419292678"/>
+  <nd ref="614650398"/>
+  <nd ref="419292676"/>
+  <nd ref="1306610070"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="38219668" visible="true" version="5" changeset="12639437" timestamp="2012-08-06T21:49:41Z" user="grimnirson" uid="579739">
+  <nd ref="46921596"/>
+  <nd ref="450289512"/>
+  <nd ref="614650398"/>
+  <nd ref="419292677"/>
+  <nd ref="1306610137"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="46985837" visible="true" version="13" changeset="24134949" timestamp="2014-07-14T08:14:25Z" user="crazycaterpillar" uid="1236336">
+  <nd ref="46921591"/>
+  <nd ref="1855008543"/>
+  <nd ref="1307316368"/>
+  <tag k="cycleway" v="opposite_lane"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="73228577" visible="true" version="10" changeset="33427109" timestamp="2015-08-18T21:29:33Z" user="mmarinschek" uid="566369">
+  <nd ref="3703665156"/>
+  <nd ref="1339090946"/>
+  <nd ref="1369383709"/>
+  <nd ref="46959572"/>
+  <nd ref="46921644"/>
+  <nd ref="1813162230"/>
+  <nd ref="46921639"/>
+  <nd ref="46921622"/>
+  <tag k="highway" v="tertiary"/>
+  <tag k="is_in" v="Austria, Europe,Vienna,Wien"/>
+  <tag k="maxspeed" v="50"/>
+  <tag k="name" v="Margaretenstraße"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source" v="yahoo"/>
+  <tag k="source:maxspeed" v="AT:urban"/>
+ </way>
+ <way id="114924459" visible="true" version="5" changeset="46794222" timestamp="2017-03-12T20:05:53Z" user="nebulon42" uid="461734">
+  <nd ref="1300468912"/>
+  <nd ref="1300468947"/>
+  <nd ref="1306286864"/>
+  <nd ref="1300468873"/>
+  <nd ref="1306287059"/>
+  <nd ref="1300469021"/>
+  <nd ref="1306286361"/>
+  <nd ref="1306287002"/>
+  <nd ref="1306286201"/>
+  <nd ref="1306286603"/>
+  <nd ref="1300468912"/>
+ </way>
+ <way id="115684970" visible="true" version="2" changeset="8300372" timestamp="2011-05-31T11:01:28Z" user="romge" uid="439883">
+  <nd ref="1306286902"/>
+  <nd ref="1306286849"/>
+  <nd ref="1306286764"/>
+  <nd ref="1306286255"/>
+  <nd ref="1306286512"/>
+  <nd ref="1306286097"/>
+  <nd ref="1306286405"/>
+  <nd ref="1306286895"/>
+  <nd ref="1306287021"/>
+  <nd ref="1306286828"/>
+  <nd ref="1306286957"/>
+  <nd ref="1306286817"/>
+  <nd ref="1306286772"/>
+  <nd ref="1306286902"/>
+  <tag k="amenity" v="fuel"/>
+  <tag k="brand" v="Independent"/>
+  <tag k="building" v="yes"/>
+  <tag k="fuel:diesel" v="yes"/>
+  <tag k="fuel:octane_91" v="yes"/>
+  <tag k="fuel:octane_95" v="yes"/>
+  <tag k="name" v="Diskont Strohmeier"/>
+  <tag k="opening_hours" v="Mo-Sa 06:00-20:00"/>
+  <tag k="operator" v="Diskont Strohmeier"/>
+ </way>
+ <way id="115684980" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:57Z" user="romge" uid="439883">
+  <nd ref="1306286578"/>
+  <nd ref="1306286978"/>
+  <nd ref="1306286849"/>
+  <tag k="barrier" v="wall"/>
+ </way>
+ <way id="115684987" visible="true" version="2" changeset="39892966" timestamp="2016-06-08T20:09:01Z" user="zimba" uid="495567">
+  <nd ref="1306286435"/>
+  <nd ref="1306286834"/>
+  <nd ref="1306286841"/>
+  <nd ref="1306286970"/>
+  <nd ref="4042856628"/>
+  <nd ref="1306286640"/>
+  <nd ref="1306286772"/>
+  <nd ref="1306286902"/>
+  <nd ref="1306286517"/>
+  <nd ref="1306286647"/>
+  <nd ref="1306286419"/>
+  <nd ref="1306286580"/>
+  <nd ref="1306287028"/>
+  <nd ref="1306286113"/>
+  <nd ref="1306286963"/>
+  <nd ref="1306287090"/>
+  <nd ref="1306286037"/>
+  <nd ref="1306286435"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115684993" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:07:59Z" user="romge" uid="439883">
+  <nd ref="1306286475"/>
+  <nd ref="1306286856"/>
+  <nd ref="1306286729"/>
+  <nd ref="1306286927"/>
+  <nd ref="1306286796"/>
+  <nd ref="1306286172"/>
+  <nd ref="1306287053"/>
+  <nd ref="1306286340"/>
+  <nd ref="1306286475"/>
+ </way>
+ <way id="115684997" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:08:00Z" user="romge" uid="439883">
+  <nd ref="1306286978"/>
+  <nd ref="1306287090"/>
+  <tag k="barrier" v="wall"/>
+ </way>
+ <way id="115685010" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:08:02Z" user="romge" uid="439883">
+  <nd ref="1306286061"/>
+  <nd ref="1306286671"/>
+  <nd ref="1306286542"/>
+  <nd ref="1306286736"/>
+  <nd ref="1306286611"/>
+  <nd ref="1306286994"/>
+  <nd ref="1306286061"/>
+ </way>
+ <way id="115685066" visible="true" version="1" changeset="8297645" timestamp="2011-05-31T00:08:13Z" user="romge" uid="439883">
+  <nd ref="1300469021"/>
+  <nd ref="1306286687"/>
+  <nd ref="1306286935"/>
+  <nd ref="1306286483"/>
+  <nd ref="1306286185"/>
+  <nd ref="1306286548"/>
+  <nd ref="1306286361"/>
+  <nd ref="1300469021"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115803478" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:19Z" user="romge" uid="439883">
+  <nd ref="1307316341"/>
+  <nd ref="1307316421"/>
+  <nd ref="1307316230"/>
+  <nd ref="1307316500"/>
+  <nd ref="1307316499"/>
+  <nd ref="1307316316"/>
+  <nd ref="1307316285"/>
+  <nd ref="1307316589"/>
+  <nd ref="1307316436"/>
+  <nd ref="1307316371"/>
+  <nd ref="1307316277"/>
+  <nd ref="1307316552"/>
+  <nd ref="1307316605"/>
+  <nd ref="1307316524"/>
+  <nd ref="1307316580"/>
+  <nd ref="1307316280"/>
+  <nd ref="1307316141"/>
+  <nd ref="1307316457"/>
+  <nd ref="1307316341"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115803482" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:05:54Z" user="nebulon42" uid="461734">
+  <nd ref="1307316485"/>
+  <nd ref="1307316304"/>
+  <nd ref="1307316357"/>
+  <nd ref="1307316265"/>
+  <nd ref="1307316330"/>
+  <nd ref="1307316358"/>
+  <nd ref="1307316574"/>
+  <nd ref="1307316377"/>
+  <nd ref="1307316530"/>
+  <nd ref="1307316583"/>
+  <nd ref="1307316409"/>
+  <nd ref="1307316485"/>
+ </way>
+ <way id="115803485" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:20Z" user="romge" uid="439883">
+  <nd ref="1307316390"/>
+  <nd ref="1307316582"/>
+  <nd ref="1307316386"/>
+  <nd ref="1307316460"/>
+  <nd ref="1307316441"/>
+  <nd ref="1307316511"/>
+  <nd ref="1307316313"/>
+  <nd ref="1307316426"/>
+  <nd ref="1307316371"/>
+  <nd ref="1307316277"/>
+  <nd ref="1307316338"/>
+  <nd ref="1307316568"/>
+  <nd ref="1307316139"/>
+  <nd ref="1307316539"/>
+  <nd ref="1307316592"/>
+  <nd ref="1307316612"/>
+  <nd ref="1307316390"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115803518" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:23Z" user="romge" uid="439883">
+  <nd ref="488538263"/>
+  <nd ref="1307316368"/>
+  <tag k="highway" v="service"/>
+ </way>
+ <way id="115803520" visible="true" version="3" changeset="46794222" timestamp="2017-03-12T20:05:54Z" user="nebulon42" uid="461734">
+  <nd ref="1307316576"/>
+  <nd ref="2175055947"/>
+  <nd ref="455894069"/>
+  <nd ref="1307316354"/>
+  <nd ref="1307316299"/>
+  <nd ref="1307316497"/>
+  <nd ref="1307316419"/>
+  <nd ref="1307316531"/>
+  <nd ref="1307316464"/>
+  <nd ref="1307316179"/>
+  <nd ref="1307316584"/>
+  <nd ref="1307316266"/>
+  <nd ref="1307316612"/>
+  <nd ref="1307316390"/>
+  <nd ref="1307316332"/>
+  <nd ref="1307316468"/>
+  <nd ref="1307316333"/>
+  <nd ref="1307316410"/>
+  <nd ref="286167248"/>
+  <nd ref="1307316197"/>
+  <nd ref="1307316486"/>
+  <nd ref="1307316576"/>
+ </way>
+ <way id="115803528" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:24Z" user="romge" uid="439883">
+  <nd ref="1307316551"/>
+  <nd ref="1307316367"/>
+  <nd ref="1307316430"/>
+  <nd ref="1307316209"/>
+  <nd ref="1307316551"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115803531" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:24Z" user="romge" uid="439883">
+  <nd ref="1307316283"/>
+  <nd ref="1307316353"/>
+  <nd ref="1307316418"/>
+  <nd ref="1307316177"/>
+  <nd ref="1307316283"/>
+ </way>
+ <way id="115803540" visible="true" version="1" changeset="8306579" timestamp="2011-05-31T23:16:25Z" user="romge" uid="439883">
+  <nd ref="1307316126"/>
+  <nd ref="1307316171"/>
+  <nd ref="1307316313"/>
+  <nd ref="1307316294"/>
+  <nd ref="1307316535"/>
+  <nd ref="1307316273"/>
+  <nd ref="1307316111"/>
+  <nd ref="1307316426"/>
+  <nd ref="1307316371"/>
+  <nd ref="1307316491"/>
+  <nd ref="1307316547"/>
+  <nd ref="1307316347"/>
+  <nd ref="1307316413"/>
+  <nd ref="1307316320"/>
+  <nd ref="1307316381"/>
+  <nd ref="1307316601"/>
+  <nd ref="1307316247"/>
+  <nd ref="1307316586"/>
+  <nd ref="1307316574"/>
+  <nd ref="1307316377"/>
+  <nd ref="1307316163"/>
+  <nd ref="1307316452"/>
+  <nd ref="1307316520"/>
+  <nd ref="1307316409"/>
+  <nd ref="1307316485"/>
+  <nd ref="1307316290"/>
+  <nd ref="1307316386"/>
+  <nd ref="1307316460"/>
+  <nd ref="1307316232"/>
+  <nd ref="1307316126"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="115803548" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:05:55Z" user="nebulon42" uid="461734">
+  <nd ref="1307316299"/>
+  <nd ref="1307316274"/>
+  <nd ref="1307316336"/>
+  <nd ref="1307316565"/>
+  <nd ref="1307316524"/>
+  <nd ref="1307316605"/>
+  <nd ref="1307316536"/>
+  <nd ref="1307316588"/>
+  <nd ref="1307316398"/>
+  <nd ref="1307316472"/>
+  <nd ref="1307316362"/>
+  <nd ref="1307316427"/>
+  <nd ref="1307316201"/>
+  <nd ref="1307316497"/>
+  <nd ref="1307316299"/>
+ </way>
+ <way id="116543297" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:08Z" user="romge" uid="439883">
+  <nd ref="1313589995"/>
+  <nd ref="1313590275"/>
+  <nd ref="1313590379"/>
+  <nd ref="1313590351"/>
+  <nd ref="1313589911"/>
+  <nd ref="1313589985"/>
+  <nd ref="1313590384"/>
+  <nd ref="1313590020"/>
+  <nd ref="1313590176"/>
+  <nd ref="1313590301"/>
+  <nd ref="1313589995"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="116543301" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:08Z" user="romge" uid="439883">
+  <nd ref="1313589995"/>
+  <nd ref="1313590075"/>
+  <nd ref="1313590047"/>
+  <nd ref="1313590143"/>
+  <nd ref="1313590251"/>
+  <nd ref="1313590362"/>
+  <nd ref="1313590331"/>
+  <nd ref="1313589889"/>
+  <nd ref="1313589959"/>
+  <nd ref="1313590013"/>
+  <nd ref="1313590301"/>
+  <nd ref="1313589995"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="116543346" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:11Z" user="romge" uid="439883">
+  <nd ref="1313590038"/>
+  <nd ref="1313589895"/>
+  <nd ref="1313589972"/>
+  <nd ref="1313590215"/>
+  <nd ref="1313590333"/>
+  <nd ref="1313590038"/>
+  <tag k="landuse" v="grass"/>
+ </way>
+ <way id="116543368" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:13Z" user="romge" uid="439883">
+  <nd ref="1313590075"/>
+  <nd ref="1313590030"/>
+  <nd ref="1313590081"/>
+  <nd ref="1313590209"/>
+  <nd ref="1313590146"/>
+  <nd ref="1313590259"/>
+  <nd ref="1313590375"/>
+  <nd ref="1313589933"/>
+  <nd ref="1313589893"/>
+  <nd ref="1313589970"/>
+  <nd ref="1313590016"/>
+  <nd ref="1313590049"/>
+  <nd ref="1313590032"/>
+  <nd ref="1313590087"/>
+  <nd ref="1313590218"/>
+  <nd ref="1313590047"/>
+  <nd ref="1313590075"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="116543395" visible="true" version="1" changeset="8355272" timestamp="2011-06-05T22:51:15Z" user="romge" uid="439883">
+  <nd ref="1313589963"/>
+  <nd ref="1313590059"/>
+  <nd ref="1313590181"/>
+  <nd ref="1313590311"/>
+  <nd ref="1313590387"/>
+  <nd ref="1313590357"/>
+  <nd ref="1313589927"/>
+  <nd ref="1313589963"/>
+  <tag k="landuse" v="grass"/>
+ </way>
+ <way id="116602155" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:05:55Z" user="nebulon42" uid="461734">
+  <nd ref="1307316427"/>
+  <nd ref="1307316362"/>
+  <nd ref="1307316472"/>
+  <nd ref="1307316398"/>
+  <nd ref="1307316588"/>
+  <nd ref="1307316536"/>
+  <nd ref="1307316605"/>
+  <nd ref="1307316552"/>
+  <nd ref="1307316277"/>
+  <nd ref="1307316338"/>
+  <nd ref="1307316568"/>
+  <nd ref="1307316139"/>
+  <nd ref="1307316539"/>
+  <nd ref="1307316592"/>
+  <nd ref="1307316612"/>
+  <nd ref="1307316266"/>
+  <nd ref="1307316584"/>
+  <nd ref="1307316179"/>
+  <nd ref="1307316464"/>
+  <nd ref="1307316531"/>
+  <nd ref="1307316419"/>
+  <nd ref="1307316497"/>
+  <nd ref="1307316201"/>
+  <nd ref="1307316427"/>
+ </way>
+ <way id="117047428" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:41Z" user="grimnirson" uid="579739">
+  <nd ref="1318617104"/>
+  <nd ref="1318617131"/>
+  <nd ref="1318617127"/>
+  <nd ref="1855008484"/>
+  <nd ref="1318617116"/>
+  <nd ref="1318617104"/>
+  <tag k="leisure" v="pitch"/>
+  <tag k="sport" v="basketball"/>
+ </way>
+ <way id="117047429" visible="true" version="2" changeset="12639437" timestamp="2012-08-06T21:49:41Z" user="grimnirson" uid="579739">
+  <nd ref="614650398"/>
+  <nd ref="1855008520"/>
+  <nd ref="1318617124"/>
+  <nd ref="1318617118"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="122580917" visible="true" version="6" changeset="51040478" timestamp="2017-08-11T17:27:42Z" user="emergency99" uid="1832939">
+  <nd ref="1369383752"/>
+  <nd ref="1365015155"/>
+  <nd ref="1369383753"/>
+  <tag k="bus" v="yes"/>
+  <tag k="highway" v="platform"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="network" v="VOR"/>
+  <tag k="public_transport" v="platform"/>
+ </way>
+ <way id="172320683" visible="true" version="3" changeset="33343573" timestamp="2015-08-14T21:54:00Z" user="evod" uid="298560">
+  <nd ref="600731084"/>
+  <nd ref="46921622"/>
+  <tag k="cycleway" v="opposite_lane"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Einsiedlergasse"/>
+  <tag k="oneway" v="yes"/>
+  <tag k="source:maxspeed" v="AT:zone:30"/>
+ </way>
+ <way id="172320686" visible="true" version="2" changeset="15173038" timestamp="2013-02-26T13:04:44Z" user="grimnirson" uid="579739">
+  <nd ref="1307316368"/>
+  <nd ref="46921596"/>
+  <nd ref="46921603"/>
+  <nd ref="1832346961"/>
+  <nd ref="46921607"/>
+  <nd ref="46921615"/>
+  <nd ref="2175055970"/>
+  <nd ref="46921576"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Am Hundsturm"/>
+ </way>
+ <way id="174848762" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739">
+  <nd ref="1855008503"/>
+  <nd ref="1855008501"/>
+  <nd ref="1855008487"/>
+  <nd ref="1855008496"/>
+  <nd ref="1855008503"/>
+  <tag k="building" v="roof"/>
+ </way>
+ <way id="174848763" visible="true" version="3" changeset="35977666" timestamp="2015-12-15T23:07:50Z" user="Nakaner-repair" uid="2149259">
+  <nd ref="1855008529"/>
+  <nd ref="1855008523"/>
+  <nd ref="837158395"/>
+  <nd ref="1855008518"/>
+  <nd ref="1855008529"/>
+  <tag k="amenity" v="toilets"/>
+  <tag k="building" v="yes"/>
+  <tag k="fee" v="no"/>
+ </way>
+ <way id="174848764" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739">
+  <nd ref="1855008552"/>
+  <nd ref="1855008550"/>
+  <nd ref="1855008537"/>
+  <nd ref="1855008539"/>
+  <nd ref="1855008552"/>
+  <tag k="building" v="roof"/>
+ </way>
+ <way id="174848765" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739">
+  <nd ref="1855008558"/>
+  <nd ref="1855008562"/>
+  <nd ref="1855008560"/>
+  <nd ref="1855008556"/>
+  <nd ref="1855008554"/>
+  <nd ref="1855008541"/>
+  <nd ref="1855008535"/>
+  <nd ref="1855008531"/>
+  <nd ref="1855008527"/>
+  <nd ref="1855008521"/>
+  <nd ref="1855008516"/>
+  <nd ref="1855008505"/>
+  <nd ref="1855008511"/>
+  <nd ref="1855008558"/>
+  <tag k="leisure" v="playground"/>
+ </way>
+ <way id="174848768" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:38Z" user="grimnirson" uid="579739">
+  <nd ref="1318617127"/>
+  <nd ref="1855008486"/>
+  <nd ref="1855008482"/>
+  <nd ref="1855008479"/>
+  <nd ref="1855008484"/>
+  <nd ref="1318617127"/>
+  <tag k="leisure" v="playground"/>
+ </way>
+ <way id="174848769" visible="true" version="2" changeset="12639592" timestamp="2012-08-06T22:04:57Z" user="grimnirson" uid="579739">
+  <nd ref="1855008567"/>
+  <nd ref="1855008565"/>
+  <nd ref="1855008563"/>
+  <nd ref="1855008522"/>
+  <nd ref="1855008533"/>
+  <nd ref="1855008567"/>
+  <tag k="area" v="yes"/>
+  <tag k="barrier" v="fence"/>
+  <tag k="leisure" v="dog_park"/>
+ </way>
+ <way id="174848771" visible="true" version="1" changeset="12639437" timestamp="2012-08-06T21:49:39Z" user="grimnirson" uid="579739">
+  <nd ref="1855008474"/>
+  <nd ref="1855008478"/>
+  <nd ref="1855008492"/>
+  <nd ref="1855008499"/>
+  <nd ref="1855008494"/>
+  <nd ref="1855008476"/>
+  <nd ref="1855008474"/>
+  <tag k="leisure" v="playground"/>
+ </way>
+ <relation id="85114" visible="true" version="136" changeset="31728877" timestamp="2015-06-04T19:29:03Z" user="emergency99" uid="1832939">
+  <member type="relation" ref="1811645" role=""/>
+  <member type="relation" ref="1668615" role=""/>
+  <tag k="name" v="Bus 12A"/>
+  <tag k="network" v="VOR"/>
+  <tag k="operator" v="Wiener Linien"/>
+  <tag k="public_transport:version" v="2"/>
+  <tag k="ref" v="12A"/>
+  <tag k="route_master" v="bus"/>
+  <tag k="type" v="route_master"/>
+ </relation>
+ <relation id="1606742" visible="true" version="3" changeset="46794222" timestamp="2017-03-12T20:06:37Z" user="nebulon42" uid="461734">
+  <member type="way" ref="114924459" role="outer"/>
+  <member type="way" ref="115684993" role="inner"/>
+  <member type="way" ref="115685010" role="inner"/>
+  <tag k="amenity" v="school"/>
+  <tag k="building" v="yes"/>
+  <tag k="email" v="vs05amhu018k@m56ssr.wien.at"/>
+  <tag k="fax" v="+43 1 5454960 - 110"/>
+  <tag k="name" v="Offene Volksschule"/>
+  <tag k="phone" v="+43 1 5454960 - 111"/>
+  <tag k="type" v="multipolygon"/>
+  <tag k="website" v="http://www.amhundsturm.at/"/>
+ </relation>
+ <relation id="1608067" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:06:38Z" user="nebulon42" uid="461734">
+  <member type="way" ref="115803520" role="outer"/>
+  <member type="way" ref="115803473" role="inner"/>
+  <tag k="building" v="yes"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+ <relation id="1608070" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:06:38Z" user="nebulon42" uid="461734">
+  <member type="way" ref="115803548" role="outer"/>
+  <member type="way" ref="115803536" role="inner"/>
+  <tag k="building" v="yes"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+ <relation id="1608071" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:06:38Z" user="nebulon42" uid="461734">
+  <member type="way" ref="115803482" role="outer"/>
+  <member type="way" ref="115803489" role="inner"/>
+  <member type="way" ref="115803531" role="inner"/>
+  <tag k="building" v="yes"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+ <relation id="1614086" visible="true" version="2" changeset="46794222" timestamp="2017-03-12T20:06:38Z" user="nebulon42" uid="461734">
+  <member type="way" ref="116602155" role="outer"/>
+  <member type="way" ref="115803528" role="inner"/>
+  <tag k="landuse" v="grass"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+ <relation id="1811645" visible="true" version="35" changeset="53884587" timestamp="2017-11-17T20:11:02Z" user="emergency99" uid="1832939">
+  <member type="node" ref="1367391286" role="stop"/>
+  <member type="way" ref="122580872" role="platform"/>
+  <member type="node" ref="1367391408" role="stop"/>
+  <member type="way" ref="122580894" role="platform"/>
+  <member type="node" ref="1369383706" role="stop"/>
+  <member type="way" ref="122580893" role="platform"/>
+  <member type="node" ref="1369383897" role="stop"/>
+  <member type="way" ref="122580886" role="platform"/>
+  <member type="node" ref="1369383900" role="stop"/>
+  <member type="way" ref="122580900" role="platform"/>
+  <member type="node" ref="1369383704" role="stop"/>
+  <member type="way" ref="122580879" role="platform"/>
+  <member type="node" ref="1366393928" role="stop"/>
+  <member type="way" ref="122580870" role="platform"/>
+  <member type="node" ref="1366393931" role="stop"/>
+  <member type="way" ref="122580914" role="platform"/>
+  <member type="node" ref="1367391402" role="stop"/>
+  <member type="way" ref="122580881" role="platform"/>
+  <member type="node" ref="1369383709" role="stop"/>
+  <member type="way" ref="122580902" role="platform"/>
+  <member type="node" ref="1367391279" role="stop"/>
+  <member type="way" ref="122580917" role="platform"/>
+  <member type="node" ref="1367391290" role="stop"/>
+  <member type="way" ref="122580915" role="platform"/>
+  <member type="node" ref="1367391410" role="stop"/>
+  <member type="way" ref="351910412" role="platform"/>
+  <member type="node" ref="3572880493" role="stop"/>
+  <member type="node" ref="1367391282" role="platform"/>
+  <member type="node" ref="291938862" role="stop"/>
+  <member type="way" ref="122580922" role="platform"/>
+  <member type="node" ref="1367391413" role="stop"/>
+  <member type="way" ref="122580910" role="platform"/>
+  <member type="node" ref="4606761822" role="stop"/>
+  <member type="way" ref="122580913" role="platform"/>
+  <member type="node" ref="2424180685" role="stop"/>
+  <member type="way" ref="122580907" role="platform"/>
+  <member type="node" ref="1367391293" role="stop"/>
+  <member type="way" ref="122580873" role="platform"/>
+  <member type="node" ref="1367391405" role="stop"/>
+  <member type="way" ref="122580911" role="platform"/>
+  <member type="node" ref="1367391406" role="stop"/>
+  <member type="way" ref="122580909" role="platform"/>
+  <member type="node" ref="46823866" role="stop"/>
+  <member type="way" ref="122580924" role="platform"/>
+  <member type="node" ref="444740678" role="stop"/>
+  <member type="way" ref="122504891" role="platform"/>
+  <member type="node" ref="1365015166" role="stop"/>
+  <member type="way" ref="122580884" role="platform"/>
+  <member type="node" ref="9921104" role="stop"/>
+  <member type="way" ref="122580883" role="platform"/>
+  <member type="node" ref="5028891721" role="stop"/>
+  <member type="way" ref="122395123" role="platform"/>
+  <member type="way" ref="122332621" role=""/>
+  <member type="way" ref="122082012" role=""/>
+  <member type="way" ref="184778922" role=""/>
+  <member type="way" ref="37192545" role=""/>
+  <member type="way" ref="37412294" role=""/>
+  <member type="way" ref="8899215" role=""/>
+  <member type="way" ref="31513015" role=""/>
+  <member type="way" ref="31340737" role=""/>
+  <member type="way" ref="220393157" role=""/>
+  <member type="way" ref="19681857" role=""/>
+  <member type="way" ref="31340735" role=""/>
+  <member type="way" ref="8113590" role=""/>
+  <member type="way" ref="25739016" role=""/>
+  <member type="way" ref="25739015" role=""/>
+  <member type="way" ref="4788797" role=""/>
+  <member type="way" ref="31513136" role=""/>
+  <member type="way" ref="5843684" role=""/>
+  <member type="way" ref="118874220" role=""/>
+  <member type="way" ref="118874226" role=""/>
+  <member type="way" ref="4786758" role=""/>
+  <member type="way" ref="31957911" role=""/>
+  <member type="way" ref="73228577" role=""/>
+  <member type="way" ref="29711945" role=""/>
+  <member type="way" ref="29711947" role=""/>
+  <member type="way" ref="5841267" role=""/>
+  <member type="way" ref="192637639" role=""/>
+  <member type="way" ref="11337926" role=""/>
+  <member type="way" ref="8658046" role=""/>
+  <member type="way" ref="169881889" role=""/>
+  <member type="way" ref="169450082" role=""/>
+  <member type="way" ref="31511910" role=""/>
+  <member type="way" ref="26616820" role=""/>
+  <member type="way" ref="513024852" role=""/>
+  <member type="way" ref="26616821" role=""/>
+  <member type="way" ref="8658047" role=""/>
+  <member type="way" ref="206648074" role=""/>
+  <member type="way" ref="7974047" role=""/>
+  <member type="way" ref="357927738" role=""/>
+  <member type="way" ref="31511837" role=""/>
+  <member type="way" ref="4583553" role=""/>
+  <member type="way" ref="234121942" role=""/>
+  <member type="way" ref="242276995" role=""/>
+  <member type="way" ref="4583618" role=""/>
+  <member type="way" ref="23323947" role=""/>
+  <member type="way" ref="269993592" role=""/>
+  <member type="way" ref="5838280" role=""/>
+  <member type="way" ref="405052282" role=""/>
+  <member type="way" ref="269993593" role=""/>
+  <member type="way" ref="31509318" role=""/>
+  <member type="way" ref="28229076" role=""/>
+  <member type="way" ref="461149504" role=""/>
+  <member type="way" ref="461149505" role=""/>
+  <member type="way" ref="9874258" role=""/>
+  <member type="way" ref="164294201" role=""/>
+  <member type="way" ref="145389584" role=""/>
+  <member type="way" ref="4583282" role=""/>
+  <member type="way" ref="49149080" role=""/>
+  <member type="way" ref="49149056" role=""/>
+  <member type="way" ref="122082010" role=""/>
+  <member type="way" ref="122082011" role=""/>
+  <member type="way" ref="37413634" role=""/>
+  <member type="way" ref="2291022" role=""/>
+  <member type="way" ref="122332617" role=""/>
+  <tag k="from" v="Eichenstraße"/>
+  <tag k="name" v="Bus 12A: Eichenstraße =&gt; Pfenniggeldgasse"/>
+  <tag k="network" v="VOR"/>
+  <tag k="operator" v="Wiener Linien"/>
+  <tag k="public_transport:version" v="2"/>
+  <tag k="ref" v="12A"/>
+  <tag k="route" v="bus"/>
+  <tag k="to" v="Pfenniggeldgasse"/>
+  <tag k="type" v="route"/>
+ </relation>
+ <relation id="7463862" visible="true" version="1" changeset="51040478" timestamp="2017-08-11T17:27:34Z" user="emergency99" uid="1832939">
+  <member type="node" ref="1369383709" role="stop"/>
+  <member type="way" ref="122580902" role="platform"/>
+  <tag k="name" v="Kohlgasse"/>
+  <tag k="network" v="VOR"/>
+  <tag k="public_transport" v="stop_area"/>
+  <tag k="type" v="public_transport"/>
+ </relation>
+ <relation id="7463863" visible="true" version="1" changeset="51040478" timestamp="2017-08-11T17:27:34Z" user="emergency99" uid="1832939">
+  <member type="node" ref="1367391281" role="stop"/>
+  <member type="way" ref="122580882" role="platform"/>
+  <member type="node" ref="1367391279" role="stop"/>
+  <member type="way" ref="122580917" role="platform"/>
+  <tag k="name" v="Am Hundsturm"/>
+  <tag k="network" v="VOR"/>
+  <tag k="public_transport" v="stop_area"/>
+  <tag k="type" v="public_transport"/>
+ </relation>
+</osm>

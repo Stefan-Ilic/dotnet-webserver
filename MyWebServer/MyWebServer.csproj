@@ -83,6 +83,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="my.runsettings" />
+    <None Include="Resources\Tiny.osm" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\index.html" />

@@ -68,7 +68,6 @@
     <Compile Include="Request.cs" />
     <Compile Include="Response.cs" />
     <Compile Include="Plugins\ToLowerPlugin.cs" />
-    <Compile Include="Uebungen\MyTests.cs" />
     <Compile Include="Uebungen\UEB1.cs" />
     <Compile Include="Uebungen\UEB2.cs" />
     <Compile Include="Uebungen\UEB3.cs" />

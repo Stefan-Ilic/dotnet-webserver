@@ -36,7 +36,7 @@ namespace MyWebServer
             var network = client.GetStream();
             var pluginManager = new PluginManager();
             var req = new Request(network);
-            if (req.IsValid)
+            if (req.IsValid && req.Url.RawUrl != "/favicon.ico")
             {
                 pluginManager.GetPlugin(req).Handle(req).Send(network);
             }

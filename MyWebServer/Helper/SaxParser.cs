@@ -51,7 +51,7 @@ namespace MyWebServer.Helper
             if (IsUpdated)
             {
                 return Cities.ContainsKey(street) ? Cities[street] : new List<string>();
-            }
+            }//TODO add thread safety here
             var cities = new List<string>();
             using (var fs = File.OpenRead(OsmFile))
             using (var xml = new System.Xml.XmlTextReader(fs))

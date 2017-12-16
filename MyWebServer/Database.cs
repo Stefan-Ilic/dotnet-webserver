@@ -56,10 +56,11 @@ namespace MyWebServer
         }
 
         //TODO add xml
-        public List<float> GetAllTemps()
+        public List<float> GetAllTemps(int page)
         {
             Connect();
-            var command = new SqlCommand(@"SELECT Temperature FROM Entry", Connection);
+            var command = new SqlCommand(@"SELECT Temperature FROM Entry ORDER BY id OFFSET (@skip) ROWS FETCH NEXT 8 ROWS ONLY", Connection);
+            command.Parameters.AddWithValue("@skip", (page-1) * 8);
             var temperatures = new List<float>();
 
             using (var reader = command.ExecuteReader())
@@ -74,10 +75,11 @@ namespace MyWebServer
         }
 
         //TODO add xml
-        public List<DateTime> GetAllDateTimes()
+        public List<DateTime> GetAllDateTimes(int page)
         {
             Connect();
-            var command = new SqlCommand(@"SELECT DateTime FROM Entry", Connection);
+            var command = new SqlCommand(@"SELECT DateTime FROM Entry ORDER BY id OFFSET (@skip) ROWS FETCH NEXT 8 ROWS ONLY", Connection);
+            command.Parameters.AddWithValue("@skip", (page - 1) * 8);
             var dateTime = new List<DateTime>();
 
             using (var reader = command.ExecuteReader())

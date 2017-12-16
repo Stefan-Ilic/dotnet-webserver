@@ -31,44 +31,11 @@ namespace MyWebServer
             var previous = "";
             var next = "";
             var content = "";
+            var resp = new Response {StatusCode = 200};
 
             if (req.Url.Segments.Contains("GetTemperature"))
             {
-                var day = req.Url.Segments[req.Url.Segments.Length - 1];
-                var month = req.Url.Segments[req.Url.Segments.Length - 2];
-                var year = req.Url.Segments[req.Url.Segments.Length - 3];
-
-                var dateToCheck = Convert.ToDateTime($"{day}/{month}/{year}");
-                temps = database.GetTemps(dateToCheck);
-                dateTimes = database.GetDateTimes(dateToCheck);
-
-                var xml = "<Entries>\n";
-
-                for (var i = 0; i < temps.Count; i++)
-                {
-                    xml +=
-                        "<Entry>\n" +
-                            "<Date>\n" +
-                                $"{dateTimes[i].Year}" +
-                                $"/{dateTimes[i].Month.ToString().PadLeft(2, '0')}/" +
-                                $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}\n" +
-                            "</Date>\n" +
-                            "<Time>\n" +
-                                $"{dateTimes[i].TimeOfDay}\n" +
-                            "</Time>\n" +
-                            "<Temperature>\n" +
-                                $"{temps[i]}\n" +
-                            "</Temperature>\n" +
-                        "</Entry>\n";
-                }
-                xml += "</Entries>";
-
-                var respo = new Response();
-                respo.SetContent(xml);
-                respo.StatusCode = 200;
-                respo.AddHeader("content-type", "text/xml");
-                respo.ContentType = "text/xml";
-                return respo;
+                return HandleRest(req);
             }
 
             var page = req.Url.Parameter.ContainsKey("page") ? int.Parse(req.Url.Parameter["page"]) : 1;
@@ -90,29 +57,80 @@ namespace MyWebServer
                 next = "/temp?page=" + (page + 1);
             }
 
+            content = BuildContent(temps, dateTimes);
+
+            resp.SetContent(Resources.Pages.temp.Replace("$$data$$", content).Replace("$$previous$$", previous).Replace("$$next$$", next));
+            resp.ContentType = "text/html";
+            return resp;
+        }
+
+        private static IResponse HandleRest(IRequest req)
+        {
+            var day = req.Url.Segments[req.Url.Segments.Length - 1];
+            var month = req.Url.Segments[req.Url.Segments.Length - 2];
+            var year = req.Url.Segments[req.Url.Segments.Length - 3];
+
+            var database = new Database();
+
+            var dateToCheck = Convert.ToDateTime($"{day}/{month}/{year}");
+            var temps = database.GetTemps(dateToCheck);
+            var dateTimes = database.GetDateTimes(dateToCheck);
+
+            var xml = BuildXml(temps, dateTimes);
+
+            var resp = new Response { StatusCode = 200 };
+            resp.SetContent(xml);
+            resp.AddHeader("content-type", "text/xml");
+            resp.ContentType = "text/xml";
+            return resp;
+        }
+
+        private static string BuildXml(IReadOnlyList<float> temps, IReadOnlyList<DateTime> dateTimes)
+        {
+            var xml = "<Entries>\n";
+            for (var i = 0; i < temps.Count; i++)
+            {
+                xml +=
+                    "<Entry>\n" +
+                    "<Date>\n" +
+                    $"{dateTimes[i].Year}" +
+                    $"/{dateTimes[i].Month.ToString().PadLeft(2, '0')}/" +
+                    $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}\n" +
+                    "</Date>\n" +
+                    "<Time>\n" +
+                    $"{dateTimes[i].TimeOfDay}\n" +
+                    "</Time>\n" +
+                    "<Temperature>\n" +
+                    $"{temps[i]}\n" +
+                    "</Temperature>\n" +
+                    "</Entry>\n";
+            }
+            xml += "</Entries>";
+            return xml;
+        }
+
+        private static string BuildContent(IReadOnlyList<float> temps, IReadOnlyList<DateTime> dateTimes)
+        {
+            var content = "";
+
             for (var i = 0; i < temps.Count; i++)
             {
                 content +=
                     "<tr>" +
-                        "<td>" +
-                            $"{temps[i]}°C" +
-                        "</td>" +
-                        "<td>" +
-                            $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}" +
-                            $".{dateTimes[i].Month.ToString().PadLeft(2, '0')}." +
-                            $"{dateTimes[i].Year}" +
-                        "</td>" +
-                        "<td>" +
-                            $"{dateTimes[i].TimeOfDay}" +
-                        "</td>" +
+                    "<td>" +
+                    $"{temps[i]}°C" +
+                    "</td>" +
+                    "<td>" +
+                    $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}" +
+                    $".{dateTimes[i].Month.ToString().PadLeft(2, '0')}." +
+                    $"{dateTimes[i].Year}" +
+                    "</td>" +
+                    "<td>" +
+                    $"{dateTimes[i].TimeOfDay}" +
+                    "</td>" +
                     "</tr>";
             }
-
-            var resp = new Response();
-            resp.SetContent(Resources.Pages.temp.Replace("$$data$$", content).Replace("$$previous$$", previous).Replace("$$next$$", next));
-            resp.StatusCode = 200;
-            resp.ContentType = "text/html";
-            return resp;
+            return content;
         }
     }
 }

@@ -8,6 +8,7 @@ namespace MyWebServer.Helper
 {
     public class EntryWriter
     {
+        //TODO xml comments here
         public static void Write()
         {
             var start = new DateTime(2007, 1, 1);

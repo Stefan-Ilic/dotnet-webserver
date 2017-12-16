@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Navigation</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Temperatur</h2>
+    <form class="form-row align-items-center" action="/temp" method="POST">
+        <div class="form-group">
+            <div class="input-group mb-2 mb-sm-0">
+                <div class="input-group-addon">Datum</div>
+                <input name="suche" type="text" class="form-control" id="inlineFormInputGroup">
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Abschicken" />
+    </form>
+    <!--<form class="form-row align-items-center" action="/temp" method="POST">
+        <input name ="update" type="submit" class="btn btn-primary pull-right" value="Straßenkarte neu aufbereiten" />
+    </form>-->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Temperatur</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+        </tr>
+        </thead>
+        <tbody>
+        $$data$$
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

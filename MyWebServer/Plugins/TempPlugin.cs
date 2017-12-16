@@ -22,11 +22,33 @@ namespace MyWebServer
 
         public IResponse Handle(IRequest req)
         {
-            var resp = new Response();
-            if (!File.Exists(req.Url.Path))
+            Console.WriteLine("The Temp Plugin is currently handling the request");
+            var database = new Database();
+            var temps = database.GetAllTemps();
+            var dateTimes = database.GetAllDateTimes();
+            var content = "";
+
+            for (var i = 0; i < temps.Count; i++)
             {
-                resp.StatusCode = 404;
+                content += 
+                    "<tr>"+
+                        "<td>"+
+                            $"{temps[i]}°C" +
+                        "</td>" +
+                        "<td>" +
+                            $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}" + 
+                            $".{dateTimes[i].Month.ToString().PadLeft(2, '0')}." + 
+                            $"{dateTimes[i].Year}" +
+                        "</td>" +
+                        "<td>"+ 
+                            $"{dateTimes[i].TimeOfDay}" +
+                        "</td>" +
+                    "</tr>";
             }
+
+            var resp = new Response();
+            resp.SetContent(Resources.Pages.temp.Replace("$$data$$", content));
+            resp.StatusCode = 200;
             return resp;
         }
     }

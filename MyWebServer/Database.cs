@@ -35,10 +35,14 @@ namespace MyWebServer
         }
 
         /// <summary>
-        /// Adds a Temperature and its DateTime to the database
+        /// Adds a Temperature and its DateTime to the database every minute
         /// </summary>
+        /// <param name="temperature"></param>
+        /// <param name="dateTime"></param>
         public void AddEntry(float temperature, DateTime dateTime)
         {
+            System.Threading.Thread.Sleep(60 * 1000);
+
             Connect();
 
             var command = new SqlCommand(@"INSERT INTO Entry (Temperature, DateTime)
@@ -49,6 +53,42 @@ namespace MyWebServer
             command.ExecuteNonQuery();
 
             Disconnect();
+        }
+
+        //TODO add xml
+        public List<float> GetAllTemps()
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT Temperature FROM Entry", Connection);
+            var temperatures = new List<float>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    temperatures.Add(float.Parse($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return temperatures;
+        }
+
+        //TODO add xml
+        public List<DateTime> GetAllDateTimes()
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT DateTime FROM Entry", Connection);
+            var dateTime = new List<DateTime>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    dateTime.Add(Convert.ToDateTime($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return dateTime;
         }
     }
 }

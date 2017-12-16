@@ -12,8 +12,8 @@ namespace MyWebServer.Helper
     {
         private static readonly object Castle = new object();
 
-        //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Austria.osm";
-        private const string OsmFile = @"Mywebserver\Resources\Tiny.osm";
+        private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Austria.osm";
+        //private const string OsmFile = @"Mywebserver\Resources\Tiny.osm";
 
         /// <summary>
         /// A Dictionary with streets as keys and Lists of cities as values

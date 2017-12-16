@@ -11,10 +11,20 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Embedded Sensor Cloud</h1>
-        <section>
+        <h1 class="text-center">Welcome to the Embedded Sensor Cloud</h1>
+        <section class ="row form-group">
             <form action="/tolower" method="POST">
-                <input type="submit" value="ToLower Plugin" class="btn btn-primary btn-lg"/>
+                <input type="submit" value="ToLower Plugin" class="btn btn-primary btn-lg btn-block"/>
+            </form>
+        </section>
+        <section class="row form-group">
+            <form action="/static/test.html" method="POST">
+                <input type="submit" value="StaticFile Plugin" class="btn btn-primary btn-lg btn-block"/>
+            </form>
+        </section>
+        <section class="row form-group">
+            <form action="/navi" method="POST">
+                <input type="submit" value="Navigation Plugin" class="btn btn-primary btn-lg btn-block"/>
             </form>
         </section>
     </div>

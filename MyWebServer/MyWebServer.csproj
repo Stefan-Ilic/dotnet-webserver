@@ -54,6 +54,7 @@
     <Compile Include="Address.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Exceptions.cs" />
+    <Compile Include="Helper\EntryWriter.cs" />
     <Compile Include="Helper\SaxParser.cs" />
     <Compile Include="LoadPluginAttribute.cs" />
     <Compile Include="Plugins\NaviPlugin.cs" />

@@ -6,7 +6,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using BIF.SWE1.Interfaces;
+using MyWebServer.Helper;
 
 namespace MyWebServer
 {
@@ -14,13 +16,9 @@ namespace MyWebServer
     {
         private static void Main(string[] args)
         {
-            var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            const string jenkins = "c:\\workspace\\BIF - WS17 - SWE1 - if16b072\\deploy";
-            if (wdir != jenkins)
-            {
-                var database = new Database();
-                database.AddEntry(1f, DateTime.Now);
-            }
+            var thread = new Thread(EntryWriter.Write);
+            thread.Start();
+
             var server = new WebServer();
             server.Listen();
         }

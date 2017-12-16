@@ -15,18 +15,15 @@
 <body>
 <div class="container">
     <h2>Temperatur</h2>
-    <form class="form-row align-items-center" action="/temp" method="POST">
+    <form class="form-row align-items-center" action="/temp" method="GET">
         <div class="form-group">
             <div class="input-group mb-2 mb-sm-0">
-                <div class="input-group-addon">Datum</div>
-                <input name="suche" type="text" class="form-control" id="inlineFormInputGroup">
+                <div class="input-group-addon">Datum (DD/MM/YYYY)</div>
+                <input name="search" type="text" class="form-control" id="inlineFormInputGroup">
             </div>
         </div>
         <input type="submit" class="btn btn-primary" value="Abschicken" />
     </form>
-    <!--<form class="form-row align-items-center" action="/temp" method="POST">
-        <input name ="update" type="submit" class="btn btn-primary pull-right" value="Straßenkarte neu aufbereiten" />
-    </form>-->
     <table class="table table-striped">
         <thead>
         <tr>

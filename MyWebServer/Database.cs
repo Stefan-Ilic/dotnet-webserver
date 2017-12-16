@@ -56,7 +56,7 @@ namespace MyWebServer
         }
 
         //TODO add xml
-        public List<float> GetAllTemps(int page)
+        public List<float> GetTemps(int page)
         {
             Connect();
             var command = new SqlCommand(@"SELECT Temperature FROM Entry ORDER BY id OFFSET (@skip) ROWS FETCH NEXT 8 ROWS ONLY", Connection);
@@ -75,11 +75,67 @@ namespace MyWebServer
         }
 
         //TODO add xml
-        public List<DateTime> GetAllDateTimes(int page)
+        public List<float> GetTemps(int page, DateTime dateTime)
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT Temperature FROM Entry 
+                WHERE DATEPART(yy, DateTime) = @year 
+                AND DATEPART(mm, DateTime) = @month 
+                AND DATEPART(dd, DateTime) = @day 
+                ORDER BY id 
+                OFFSET (@skip) ROWS 
+                FETCH NEXT 8 ROWS ONLY", Connection);
+            command.Parameters.AddWithValue("@skip", (page - 1) * 8);
+            command.Parameters.AddWithValue("@year", dateTime.Year);
+            command.Parameters.AddWithValue("@month", dateTime.Month);
+            command.Parameters.AddWithValue("@day", dateTime.Day);
+            var temperatures = new List<float>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    temperatures.Add(float.Parse($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return temperatures;
+        }
+
+        //TODO add xml
+        public List<DateTime> GetDateTimes(int page)
         {
             Connect();
             var command = new SqlCommand(@"SELECT DateTime FROM Entry ORDER BY id OFFSET (@skip) ROWS FETCH NEXT 8 ROWS ONLY", Connection);
             command.Parameters.AddWithValue("@skip", (page - 1) * 8);
+            var dateTime = new List<DateTime>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    dateTime.Add(Convert.ToDateTime($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return dateTime;
+        }
+
+        //TODO add xml
+        public List<DateTime> GetDateTimes(int page, DateTime inputDate)
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT DateTime FROM Entry 
+                WHERE DATEPART(yy, DateTime) = @year 
+                AND DATEPART(mm, DateTime) = @month 
+                AND DATEPART(dd, DateTime) = @day 
+                ORDER BY id 
+                OFFSET (@skip) ROWS 
+                FETCH NEXT 8 ROWS ONLY", Connection);
+            command.Parameters.AddWithValue("@skip", (page - 1) * 8);
+            command.Parameters.AddWithValue("@year", inputDate.Year);
+            command.Parameters.AddWithValue("@month", inputDate.Month);
+            command.Parameters.AddWithValue("@day", inputDate.Day);
             var dateTime = new List<DateTime>();
 
             using (var reader = command.ExecuteReader())

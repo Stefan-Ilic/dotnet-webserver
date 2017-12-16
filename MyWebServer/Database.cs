@@ -103,6 +103,31 @@ namespace MyWebServer
         }
 
         //TODO add xml
+        public List<float> GetTemps(DateTime dateTime)
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT Temperature FROM Entry 
+                WHERE DATEPART(yy, DateTime) = @year 
+                AND DATEPART(mm, DateTime) = @month 
+                AND DATEPART(dd, DateTime) = @day 
+                ORDER BY id", Connection);
+            command.Parameters.AddWithValue("@year", dateTime.Year);
+            command.Parameters.AddWithValue("@month", dateTime.Month);
+            command.Parameters.AddWithValue("@day", dateTime.Day);
+            var temperatures = new List<float>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    temperatures.Add(float.Parse($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return temperatures;
+        }
+
+        //TODO add xml
         public List<DateTime> GetDateTimes(int page)
         {
             Connect();
@@ -133,6 +158,31 @@ namespace MyWebServer
                 OFFSET (@skip) ROWS 
                 FETCH NEXT 8 ROWS ONLY", Connection);
             command.Parameters.AddWithValue("@skip", (page - 1) * 8);
+            command.Parameters.AddWithValue("@year", inputDate.Year);
+            command.Parameters.AddWithValue("@month", inputDate.Month);
+            command.Parameters.AddWithValue("@day", inputDate.Day);
+            var dateTime = new List<DateTime>();
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    dateTime.Add(Convert.ToDateTime($"{reader[0]}"));
+                }
+            }
+            Disconnect();
+            return dateTime;
+        }
+
+        //TODO add xml
+        public List<DateTime> GetDateTimes(DateTime inputDate)
+        {
+            Connect();
+            var command = new SqlCommand(@"SELECT DateTime FROM Entry 
+                WHERE DATEPART(yy, DateTime) = @year 
+                AND DATEPART(mm, DateTime) = @month 
+                AND DATEPART(dd, DateTime) = @day 
+                ORDER BY id", Connection);
             command.Parameters.AddWithValue("@year", inputDate.Year);
             command.Parameters.AddWithValue("@month", inputDate.Month);
             command.Parameters.AddWithValue("@day", inputDate.Day);

@@ -25,15 +25,54 @@ namespace MyWebServer
         {
             Console.WriteLine("The Temp Plugin is currently handling the request");
 
-            var page = req.Url.Parameter.ContainsKey("page") ? int.Parse(req.Url.Parameter["page"]) : 1;
-            page = page < 1 ? 1 : page;
-
             var database = new Database();
             var temps = new List<float>();
             var dateTimes = new List<DateTime>();
             var previous = "";
             var next = "";
             var content = "";
+
+            if (req.Url.Segments.Contains("GetTemperature"))
+            {
+                var day = req.Url.Segments[req.Url.Segments.Length - 1];
+                var month = req.Url.Segments[req.Url.Segments.Length - 2];
+                var year = req.Url.Segments[req.Url.Segments.Length - 3];
+
+                var dateToCheck = Convert.ToDateTime($"{day}/{month}/{year}");
+                temps = database.GetTemps(dateToCheck);
+                dateTimes = database.GetDateTimes(dateToCheck);
+
+                var xml = "<Entries>\n";
+
+                for (var i = 0; i < temps.Count; i++)
+                {
+                    xml +=
+                        "<Entry>\n" +
+                            "<Date>\n" +
+                                $"{dateTimes[i].Year}" +
+                                $"/{dateTimes[i].Month.ToString().PadLeft(2, '0')}/" +
+                                $"{dateTimes[i].Day.ToString().PadLeft(2, '0')}\n" +
+                            "</Date>\n" +
+                            "<Time>\n" +
+                                $"{dateTimes[i].TimeOfDay}\n" +
+                            "</Time>\n" +
+                            "<Temperature>\n" +
+                                $"{temps[i]}\n" +
+                            "</Temperature>\n" +
+                        "</Entry>\n";
+                }
+                xml += "</Entries>";
+
+                var respo = new Response();
+                respo.SetContent(xml);
+                respo.StatusCode = 200;
+                respo.AddHeader("content-type", "text/xml");
+                respo.ContentType = "text/xml";
+                return respo;
+            }
+
+            var page = req.Url.Parameter.ContainsKey("page") ? int.Parse(req.Url.Parameter["page"]) : 1;
+            page = page < 1 ? 1 : page;
 
             if (req.Url.Parameter.ContainsKey("search") && !string.IsNullOrWhiteSpace(req.Url.Parameter["search"]))
             {

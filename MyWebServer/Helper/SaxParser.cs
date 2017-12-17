@@ -12,7 +12,7 @@ namespace MyWebServer.Helper
     {
         private static readonly object Castle = new object();
 
-        //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Austria.osm";
+        //private const string OsmFile = @"C:\projects\SWE1\SWE1-CS\deploy\Small.osm";
         private const string OsmFile = @"Mywebserver\Resources\Tiny.osm";
 
         /// <summary>
@@ -51,20 +51,24 @@ namespace MyWebServer.Helper
             if (IsUpdated)
             {
                 return Cities.ContainsKey(street) ? Cities[street] : new List<string>();
-            }//TODO add thread safety here
-            var cities = new List<string>();
-            using (var fs = File.OpenRead(OsmFile))
-            using (var xml = new System.Xml.XmlTextReader(fs))
+            }
+            lock (Castle)
             {
-                while (xml.Read())
+                var cities = new List<string>();
+                using (var fs = File.OpenRead(OsmFile))
+                using (var xml = new System.Xml.XmlTextReader(fs))
                 {
-                    if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
+                    while (xml.Read())
                     {
-                        cities = GetCitiesFromNodes(xml, street);
+                        if (xml.NodeType == System.Xml.XmlNodeType.Element && xml.Name == "osm")
+                        {
+                            cities = GetCitiesFromNodes(xml, street);
+                        }
                     }
                 }
+                return cities;
             }
-            return cities;
+
         }
 
         private static List<string> GetCitiesFromNodes(System.Xml.XmlTextReader xml, string street)

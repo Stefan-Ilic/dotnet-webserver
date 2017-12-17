@@ -43,7 +43,16 @@ namespace MyWebServer
 
             if (req.Url.Parameter.ContainsKey("search") && !string.IsNullOrWhiteSpace(req.Url.Parameter["search"]))
             {
-                var dateTime = Convert.ToDateTime(WebUtility.UrlDecode(req.Url.Parameter["search"])); //TODO error handling here
+                DateTime dateTime;
+                try
+                {
+                    dateTime = Convert.ToDateTime(WebUtility.UrlDecode(req.Url.Parameter["search"]));
+
+                }
+                catch (Exception)
+                {
+                    dateTime = Convert.ToDateTime("01/01/2017");
+                }
                 temps = database.GetTemps(page, dateTime);
                 dateTimes = database.GetDateTimes(page, dateTime);
                 previous = $"/temp?search={dateTime}&page=" + (page == 1 ? 1 : page - 1);
@@ -66,13 +75,32 @@ namespace MyWebServer
 
         private static IResponse HandleRest(IRequest req)
         {
-            var day = req.Url.Segments[req.Url.Segments.Length - 1];
-            var month = req.Url.Segments[req.Url.Segments.Length - 2];
-            var year = req.Url.Segments[req.Url.Segments.Length - 3];
+            string day, month, year;
+            try
+            {
+                day = req.Url.Segments[req.Url.Segments.Length - 1];
+                month = req.Url.Segments[req.Url.Segments.Length - 2];
+                year = req.Url.Segments[req.Url.Segments.Length - 3];
+            }
+            catch (Exception)
+            {
+                day = "01";
+                month = "01";
+                year = "2017";
+            }
+
 
             var database = new Database();
 
-            var dateToCheck = Convert.ToDateTime($"{day}/{month}/{year}");
+            DateTime dateToCheck;
+            try
+            {
+                dateToCheck = Convert.ToDateTime($"{day}/{month}/{year}");
+            }
+            catch (Exception)
+            {
+                dateToCheck = Convert.ToDateTime("01/01/2017");
+            }
             var temps = database.GetTemps(dateToCheck);
             var dateTimes = database.GetDateTimes(dateToCheck);
 

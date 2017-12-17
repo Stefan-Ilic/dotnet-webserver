@@ -8,7 +8,9 @@ namespace MyWebServer.Helper
 {
     public class EntryWriter
     {
-        //TODO xml comments here
+        /// <summary>
+        /// Writes randomly generated temperatures and datetimes to the database
+        /// </summary>
         public static void Write()
         {
             var start = new DateTime(2007, 1, 1);
@@ -17,7 +19,7 @@ namespace MyWebServer.Helper
             while (true)
             {
                 database.AddEntry(GetRandomTemp(), GetRandomDateTime(start, end));
-            }//TODO error handling here
+            }
         }
 
         private static DateTime GetRandomDateTime(DateTime start, DateTime end)

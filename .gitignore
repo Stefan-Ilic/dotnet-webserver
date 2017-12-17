@@ -4,4 +4,5 @@ obj
 deploy/**
 /MyWebServer/*.user
 .vs
-/MyWebServer/Uebungen/MyTests.cs
+*.pdf
+/DoxyGen/html

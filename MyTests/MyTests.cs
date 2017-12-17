@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Text;
 using BIF.SWE1.Interfaces;
 using MyWebServer;
@@ -241,6 +242,115 @@ namespace MyTests
         }
         #endregion
 
+        #region TemperaturePlugin
+
+        [Test]
+        public void temp_rest_handle_invalid()
+        {
+            var plugin = GetTemperaturePlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetTemperaturePlugin returned null");
+
+            var url = "/GetTemperature/yolo";
+            Assert.That(url, Is.Not.Null, "IUEB6.GetTemperatureUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentType, Is.EqualTo("text/xml"));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+        }
+
+        [Test]
+        public void temp_rest_handle_future()
+        {
+            var plugin = GetTemperaturePlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetTemperaturePlugin returned null");
+
+            var url = GetTemperatureRestUrl(new DateTime(2020, 1, 1), new DateTime(2020, 1, 1));
+            Assert.That(url, Is.Not.Null, "IUEB6.GetTemperatureUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentType, Is.EqualTo("text/xml"));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+        }
+
+        [Test]
+        public void temp_handle_invalid_search()
+        {
+            var plugin = GetTemperaturePlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetTemperaturePlugin returned null");
+
+            var url = "/temp?search=hallo";
+            Assert.That(url, Is.Not.Null, "IUEB6.GetTemperatureUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentType, Is.EqualTo("text/html"));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+        }
+
+        [Test]
+        public void temp_handle_search()
+        {
+            var plugin = GetTemperaturePlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetTemperaturePlugin returned null");
+
+            var url = "/temp?search=01.01.2017";
+            Assert.That(url, Is.Not.Null, "IUEB6.GetTemperatureUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentType, Is.EqualTo("text/html"));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+        }
+
+        [Test]
+        public void temp_handle_page()
+        {
+            var plugin = GetTemperaturePlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetTemperaturePlugin returned null");
+
+            var url = "/temp?page=05";
+            Assert.That(url, Is.Not.Null, "IUEB6.GetTemperatureUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentType, Is.EqualTo("text/html"));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+        }
+
+        #endregion
+
         #region Helper
 
         public static Stream GetValidRequestStream(string url, string method = "GET", string host = "localhost", string[][] header = null, string body = null)
@@ -351,6 +461,21 @@ namespace MyTests
         public IPlugin GetStaticFilePlugin()
         {
             return new StaticFilePlugin();
+        }
+
+        public IPlugin GetTemperaturePlugin()
+        {
+            return new TempPlugin();
+        }
+
+        public string GetTemperatureRestUrl(DateTime from, DateTime until)
+        {
+            return $"/GetTemperature/{from.Year}/{from.Month}/{from.Day}";
+        }
+
+        public string GetTemperatureUrl(DateTime from, DateTime until)
+        {
+            return "/temp/" + from.ToString("yyyyMMdd") + "to" + until.ToString("yyyyMMdd");
         }
 
         #endregion

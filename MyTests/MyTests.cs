@@ -113,6 +113,106 @@ namespace MyTests
         }
 
         [Test]
+        public void tolower_handle_arabic()
+        {
+            var plugin = GetToLowerPlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetToLowerPlugin returned null");
+
+            var url = GetToLowerUrl();
+            Assert.That(url, Is.Not.Null, "IUEB6.GetToLowerUrl returned null");
+
+            var textToTest = "هذا اختبار";
+
+            var req = GetRequest(GetValidRequestStream(url, method: "POST", body: $"text={textToTest}"));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+
+            var body = GetBody(resp);
+            Assert.That(body.ToString(), Does.Contain(textToTest.ToLower()));
+        }
+
+        [Test]
+        public void tolower_handle_greek()
+        {
+            var plugin = GetToLowerPlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetToLowerPlugin returned null");
+
+            var url = GetToLowerUrl();
+            Assert.That(url, Is.Not.Null, "IUEB6.GetToLowerUrl returned null");
+
+            var textToTest = "Ψ Λ Ξ Σ Φ";
+
+            var req = GetRequest(GetValidRequestStream(url, method: "POST", body: $"text={textToTest}"));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+
+            var body = GetBody(resp);
+            Assert.That(body.ToString(), Does.Contain(textToTest.ToLower()));
+        }
+
+        [Test]
+        public void tolower_handle_zhuyin_fuhao()
+        {
+            var plugin = GetToLowerPlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetToLowerPlugin returned null");
+
+            var url = GetToLowerUrl();
+            Assert.That(url, Is.Not.Null, "IUEB6.GetToLowerUrl returned null");
+
+            var textToTest = "注音符號";
+
+            var req = GetRequest(GetValidRequestStream(url, method: "POST", body: $"text={textToTest}"));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+
+            var body = GetBody(resp);
+            Assert.That(body.ToString(), Does.Contain(textToTest.ToLower()));
+        }
+
+        [Test]
+        public void tolower_handle_hindi()
+        {
+            var plugin = GetToLowerPlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetToLowerPlugin returned null");
+
+            var url = GetToLowerUrl();
+            Assert.That(url, Is.Not.Null, "IUEB6.GetToLowerUrl returned null");
+
+            var textToTest = "हिन्दी";
+
+            var req = GetRequest(GetValidRequestStream(url, method: "POST", body: $"text={textToTest}"));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+
+            var body = GetBody(resp);
+            Assert.That(body.ToString(), Does.Contain(textToTest.ToLower()));
+        }
+
+        [Test]
         public void tolower_handle_html()
         {
             var plugin = GetToLowerPlugin();
@@ -351,6 +451,33 @@ namespace MyTests
 
         #endregion
 
+        #region NavigationPlugin
+
+        [Test]
+        public void navi_handle_update()
+        {
+            var plugin = GetNavigationPlugin();
+            Assert.That(plugin, Is.Not.Null, "IUEB6.GetNavigationPlugin returned null");
+
+            var url = GetNaviUrl();
+            Assert.That(url, Is.Not.Null, "IUEB6.GetNaviUrl returned null");
+
+            var req = GetRequest(GetValidRequestStream(url, method: "POST", body: "update=straßenkarte neu aufbereiten"));
+            Assert.That(req, Is.Not.Null, "IUEB6.GetRequest returned null");
+
+            Assert.That(plugin.CanHandle(req), Is.GreaterThan(0).And.LessThanOrEqualTo(1));
+
+            var resp = plugin.Handle(req);
+            Assert.That(resp, Is.Not.Null);
+            Assert.That(resp.StatusCode, Is.EqualTo(200));
+            Assert.That(resp.ContentLength, Is.GreaterThan(0));
+
+            var body = GetBody(resp);
+            Assert.That(body.ToString(), Does.Contain("Die interne Karte wurde aktualisiert"));
+        }
+
+        #endregion
+
         #region Helper
 
         public static Stream GetValidRequestStream(string url, string method = "GET", string host = "localhost", string[][] header = null, string body = null)
@@ -476,6 +603,16 @@ namespace MyTests
         public string GetTemperatureUrl(DateTime from, DateTime until)
         {
             return "/temp/" + from.ToString("yyyyMMdd") + "to" + until.ToString("yyyyMMdd");
+        }
+
+        public string GetNaviUrl()
+        {
+            return "/navi";
+        }
+
+        public IPlugin GetNavigationPlugin()
+        {
+            return new NaviPlugin();
         }
 
         #endregion

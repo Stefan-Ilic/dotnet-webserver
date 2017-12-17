@@ -21,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,19 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMyTests.cs" />
     <Compile Include="MyTests.cs" />
-    <Compile Include="MyTestsImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\unit-tests\BIF-SWE1\CS\BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj">
       <Project>{27C44945-CB10-48BF-AD69-457D496B32A2}</Project>
       <Name>BIF-SWE1.Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\unit-tests\BIF-SWE1\CS\BIF-SWE1.UnitTests\BIF-SWE1.UnitTests.csproj">
-      <Project>{6B6F4CDB-461C-4C8D-A5D5-BC2BDBC57D99}</Project>
-      <Name>BIF-SWE1.UnitTests</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyWebServer\MyWebServer.csproj">
       <Project>{105A430E-499F-4549-99FE-FC6B23C9C976}</Project>

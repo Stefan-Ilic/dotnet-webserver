@@ -50,15 +50,13 @@ namespace MyWebServer
         }
 
         /// <summary>
-        /// Adds a Temperature and its DateTime to the database every 10 minutes
+        /// Adds a Temperature and its DateTime to the database
         /// </summary>
         /// <param name="temperature"></param>
         /// <param name="dateTime"></param>
         public void AddEntry(float temperature, DateTime dateTime)
         {
             if (IsMock) return;
-
-            System.Threading.Thread.Sleep(10 * 60 * 1000);
 
             Connect();
 

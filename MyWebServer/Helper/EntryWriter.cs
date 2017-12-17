@@ -9,7 +9,7 @@ namespace MyWebServer.Helper
     public class EntryWriter
     {
         /// <summary>
-        /// Writes randomly generated temperatures and datetimes to the database
+        /// Writes randomly generated temperatures and datetimes to the database every 10 minutes
         /// </summary>
         public static void Write()
         {
@@ -18,6 +18,7 @@ namespace MyWebServer.Helper
             var database = new Database();
             while (true)
             {
+                System.Threading.Thread.Sleep(10 * 60 * 1000);
                 database.AddEntry(GetRandomTemp(), GetRandomDateTime(start, end));
             }
         }

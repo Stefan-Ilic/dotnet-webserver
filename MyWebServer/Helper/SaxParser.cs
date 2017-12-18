@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace MyWebServer.Helper
 {
+    /// <summary>
+    /// Used to parse a OSM file
+    /// </summary>
     public class SaxParser
     {
         private static readonly object Castle = new object();

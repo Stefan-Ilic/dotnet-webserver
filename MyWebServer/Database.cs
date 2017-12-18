@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace MyWebServer
 {
+    /// <summary>
+    /// This class represents the database
+    /// </summary>
     public class Database
     {
         /// <summary>
@@ -28,6 +31,9 @@ namespace MyWebServer
         /// </summary>
         public bool IsMock { get; set; } = false;
 
+        /// <summary>
+        /// Instances the database object and sets the IsMock property according to execution location
+        /// </summary>
         public Database()
         {
             var wdir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);

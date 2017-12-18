@@ -9,9 +9,17 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    /// <summary>
+    /// This plugin will return the measured temperatures of given day(s)
+    /// </summary>
     [LoadPlugin]
     public class TempPlugin : IPlugin
     {
+        /// <summary>
+        /// Returns a score between 0 and 1 to indicate that the plugin is willing to handle the request. The plugin with the highest score will execute the request.
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns>A score between 0 and 1</returns>
         public float CanHandle(IRequest req)
         {
             if (req.Url.Segments.Contains("temp") || req.Url.Segments.Contains("GetTemperature"))
@@ -21,6 +29,11 @@ namespace MyWebServer
             return Regex.Matches(req.Url.RawUrl, "temp").Count * 0.02f;
         }
 
+        /// <summary>
+        /// Called by the server when the plugin should handle the request.
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns>A new response object.</returns>
         public IResponse Handle(IRequest req)
         {
             Console.WriteLine("The Temp Plugin is currently handling the request");

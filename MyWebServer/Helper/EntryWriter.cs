@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MyWebServer.Helper
 {
+    /// <summary>
+    /// Used to write entries to the database
+    /// </summary>
     public class EntryWriter
     {
         /// <summary>

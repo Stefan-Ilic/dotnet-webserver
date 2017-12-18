@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Exceptions.cs" />
     <Compile Include="Helper\EntryWriter.cs" />
@@ -81,7 +80,6 @@
     <Compile Include="Uebungen\UEB5.cs" />
     <Compile Include="Uebungen\UEB6.cs" />
     <Compile Include="Url.cs" />
-    <Compile Include="Utility.cs" />
     <Compile Include="WebServer.cs" />
   </ItemGroup>
   <ItemGroup>

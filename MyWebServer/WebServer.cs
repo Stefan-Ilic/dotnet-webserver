@@ -9,8 +9,14 @@ using System.Threading.Tasks;
 
 namespace MyWebServer
 {
+    /// <summary>
+    /// Does everything a webserver does
+    /// </summary>
     public class WebServer
     {
+        /// <summary>
+        /// Instances the webserver
+        /// </summary>
         public WebServer()
         {
             Server = new TcpListener(Ip, Port);

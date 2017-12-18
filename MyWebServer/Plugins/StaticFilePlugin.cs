@@ -10,9 +10,17 @@ using BIF.SWE1.Interfaces;
 
 namespace MyWebServer
 {
+    /// <summary>
+    /// This plugin will return a static file from a directory on the server
+    /// </summary>
     [LoadPlugin]
     public class StaticFilePlugin : IPlugin
     {
+        /// <summary>
+        /// Returns a score between 0 and 1 to indicate that the plugin is willing to handle the request. The plugin with the highest score will execute the request.
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns>A score between 0 and 1</returns>
         public float CanHandle(IRequest req)
         {
             if (req.Url.Segments.Contains("static"))
@@ -22,6 +30,11 @@ namespace MyWebServer
             return Regex.Matches(req.Url.RawUrl, "static").Count * 0.01f;
         }
 
+        /// <summary>
+        /// Called by the server when the plugin should handle the request.
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns>A new response object.</returns>
         public IResponse Handle(IRequest req)
         {
             Console.WriteLine("The StaticFile plugin is currently Handling the Request");
